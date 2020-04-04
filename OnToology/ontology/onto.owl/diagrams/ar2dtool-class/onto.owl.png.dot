@@ -1,0 +1,54 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Sintoma" "base:Medicamento" "base:Frase" "base:PrincipioActivo" "166da6fc:1714541e217:-7ffc" "base:Efecto" "166da6fc:1714541e217:-7ff9" "base:Paper" "base:Enfermedad" "base:CompuestoQuimico" ; /*classes style*/
+	"NULL" -> "base:Enfermedad" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:Medicamento" [ label = "rdf:first" ];
+	"NULL" -> "166da6fc:1714541e217:-7ffb" [ label = "owl:unionOf" ];
+	"NULL" -> "base:esTratadaConMedicamento" [ label = "owl:onProperty" ];
+	"NULL" -> "base:contiene" [ label = "owl:onProperty" ];
+	"NULL" -> "166da6fc:1714541e217:-7ff5" [ label = "rdf:rest" ];
+	"NULL" -> "base:Medicamento" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "166da6fc:1714541e217:-7ff8" [ label = "owl:unionOf" ];
+	"NULL" -> "base:Sintoma" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:Efecto" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:Enfermedad" [ label = "rdf:first" ];
+	"NULL" -> "base:tieneSintoma" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Frase" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:causadoPorMedicamento" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Paper" [ label = "rdf:first" ];
+	"NULL" -> "166da6fc:1714541e217:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "base:tienePrincipioActivo" [ label = "owl:onProperty" ];
+	"NULL" -> "base:CompuestoQuimico" [ label = "rdf:first" ];
+	"NULL" -> "base:tieneEfecto" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "base:Sintoma" [ label = "rdf:first" ];
+	"NULL" -> "base:trataEnfermedad" [ label = "owl:onProperty" ];
+	"NULL" -> "base:Frase" [ label = "rdf:first" ];
+	"NULL" -> "166da6fc:1714541e217:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "166da6fc:1714541e217:-7ff6" [ label = "rdf:rest" ];
+	"NULL" -> "base:PrincipioActivo" [ label = "owl:someValuesFrom" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "https://w3id.org/def/DRUGS4COVID19" [ label = "vann:preferredNamespaceUri" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "http://www.oeg-upm.net/" [ label = "terms:creator" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "http://www.oeg-upm.net/" [ label = "dc:publisher" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "http://purl.org/net/mpoveda" [ label = "terms:contributor" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/" [ label = "rdfs:seeAlso" ];
+	"https://w3id.org/def/DRUGS4COVID19" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:nombreCientifico" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoMesh" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:identificador" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoATC3" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:licencia" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:nombrePrincipioActivo" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoATC4" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:problema" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoATC5" ];
+	"166da6fc:1714541e217:-7ffc" -> "166da6fc:1714541e217:-7ff9" [ label = "base:menciona" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:nombreMedicamento" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:asbtract" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:texto" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoATC1" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:codigoATC2" ];
+	"owl:Thing" -> "xsd:string" [ label = "base:titulo" ];
+
+}

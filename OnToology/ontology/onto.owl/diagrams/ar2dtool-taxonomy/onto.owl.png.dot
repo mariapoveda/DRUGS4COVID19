@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:PrincipioActivo" "base:Paper" "terms:BibliographicResource" "base:CompuestoQuimico" ; /*classes style*/
+	"base:Paper" -> "terms:BibliographicResource" [ label = "rdfs:subClassOf" ];
+	"base:PrincipioActivo" -> "base:CompuestoQuimico" [ label = "rdfs:subClassOf" ];
+
+}
