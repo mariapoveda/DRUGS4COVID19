@@ -87,6 +87,11 @@
           rdfs:label "contiene"@es .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento
+:esPrincipioActivoDeMedicamento rdf:type owl:ObjectProperty ;
+                                rdfs:label "es principio activo de medicamento" .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad
 :esSintomaDeEnfermedad rdf:type owl:ObjectProperty ;
                        owl:inverseOf :tieneSintoma ;
@@ -96,7 +101,24 @@
 ###  https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento
 :esTratadaConMedicamento rdf:type owl:ObjectProperty ;
                          owl:inverseOf :trataEnfermedad ;
-                         rdfs:label "es tratada con medicamento"@es .
+                         rdfs:label "es tratada con medicamento"@es ;
+                         owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#esTratadoCon
+:esTratadoCon rdf:type owl:ObjectProperty ;
+              owl:inverseOf :trataSintoma ;
+              rdfs:label "es tratado con medicamento"@es .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento
+:esTratadoConMedicamento rdf:type owl:ObjectProperty ;
+                         rdfs:label "es tratado con medicamento" .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara
+:estaContraindicadoPara rdf:type owl:ObjectProperty ;
+                        rdfs:label "esta contraindicado para" .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#menciona
@@ -131,19 +153,41 @@
               rdfs:label "tiene síntoma"@es .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#trataDesorden
+:trataDesorden rdf:type owl:ObjectProperty ;
+               rdfs:label "trata desorden" .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#trataEnfermedad
 :trataEnfermedad rdf:type owl:ObjectProperty ;
-                 rdfs:label "trata enfermedad"@es .
+                 rdfs:label "trata enfermedad"@es ;
+                 owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#trataSintoma
+:trataSintoma rdf:type owl:ObjectProperty ;
+              rdfs:label "trata síntoma"@es .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://w3id.org/def/DRUGS4COVID19#asbtract
-:asbtract rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "Resumen"@es .
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:DatatypeProperty ;
+                                    rdfs:label "Abstract" .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
+                                rdfs:range rdfs:Literal ;
+                                rdfs:label "Fecha" .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "Source" .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#codigoATC1
@@ -182,6 +226,11 @@
             rdfs:label "Código MESH"@es .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#codigoSNOMED
+:codigoSNOMED rdf:type owl:DatatypeProperty ;
+              rdfs:label "Código SNOMED" .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#identificador
 :identificador rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
@@ -198,6 +247,11 @@
 :nombreCientifico rdf:type owl:DatatypeProperty ;
                   rdfs:range xsd:string ;
                   rdfs:label "Nombre científico"@es .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#nombreDesorden
+:nombreDesorden rdf:type owl:DatatypeProperty ;
+                rdfs:label "Nombre del desorden" .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#nombreMedicamento
@@ -244,6 +298,15 @@
                   rdfs:label "Compuesto quimico"@es .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#Desorden
+:Desorden rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :esTratadoConMedicamento ;
+                            owl:someValuesFrom :Medicamento
+                          ] ;
+          rdfs:label "Desorden" .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#Efecto
 :Efecto rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -255,10 +318,7 @@
 
 ###  https://w3id.org/def/DRUGS4COVID19#Enfermedad
 :Enfermedad rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :esTratadaConMedicamento ;
-                              owl:someValuesFrom :Medicamento
-                            ] ,
+            rdfs:subClassOf :Desorden ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :tieneSintoma ;
                               owl:someValuesFrom :Sintoma
@@ -274,6 +334,10 @@
 ###  https://w3id.org/def/DRUGS4COVID19#Medicamento
 :Medicamento rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :estaContraindicadoPara ;
+                               owl:someValuesFrom :Desorden
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :tieneEfecto ;
                                owl:someValuesFrom :Efecto
                              ] ,
@@ -282,8 +346,8 @@
                                owl:someValuesFrom :PrincipioActivo
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :trataEnfermedad ;
-                               owl:someValuesFrom :Enfermedad
+                               owl:onProperty :trataDesorden ;
+                               owl:someValuesFrom :Desorden
                              ] ;
              rdfs:label "Medicamento"@es .
 
@@ -306,6 +370,7 @@
 
 ###  https://w3id.org/def/DRUGS4COVID19#Sintoma
 :Sintoma rdf:type owl:Class ;
+         rdfs:subClassOf :Desorden ;
          rdfs:label "Síntoma"@es .
 
 

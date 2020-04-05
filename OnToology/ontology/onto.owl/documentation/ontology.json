@@ -12,7 +12,7 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento"
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#Medicamento"
@@ -30,13 +30,22 @@
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#tieneEfecto"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#Efecto"
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#tienePrincipioActivo"
@@ -45,16 +54,16 @@
     "@id" : "https://w3id.org/def/DRUGS4COVID19#PrincipioActivo"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/DRUGS4COVID19#trataEnfermedad"
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#trataDesorden"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/DRUGS4COVID19#Enfermedad"
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#contiene"
@@ -80,7 +89,7 @@
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento"
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#Medicamento"
@@ -102,6 +111,12 @@
     "@value" : "Recurso bibliográfico"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Abstract"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -111,11 +126,29 @@
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fecha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/source",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -196,6 +229,15 @@
     "@value" : "Compuesto quimico"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Desorden"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid9"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Efecto",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -203,7 +245,7 @@
     "@value" : "Efecto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid9"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Enfermedad",
@@ -213,7 +255,7 @@
     "@value" : "Enfermedad"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid10"
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden"
   }, {
     "@id" : "_:genid11"
   } ]
@@ -237,6 +279,8 @@
     "@id" : "_:genid13"
   }, {
     "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Paper",
@@ -248,7 +292,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/dc/terms/BibliographicResource"
   }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#PrincipioActivo",
@@ -266,16 +310,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "Síntoma"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/DRUGS4COVID19#asbtract",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Resumen"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento",
@@ -348,11 +385,23 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoSNOMED",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Código SNOMED"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#contiene",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "contiene"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "es principio activo de medicamento"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad",
@@ -371,8 +420,34 @@
     "@language" : "es",
     "@value" : "es tratada con medicamento"
   } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#trataEnfermedad"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadoCon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "es tratado con medicamento"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#trataSintoma"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "es tratado con medicamento"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "esta contraindicado para"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#identificador",
@@ -416,6 +491,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#nombreDesorden",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nombre del desorden"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#nombreMedicamento",
@@ -489,10 +570,27 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#trataDesorden",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "trata desorden"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#trataEnfermedad",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
     "@value" : "trata enfermedad"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#trataSintoma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "trata síntoma"
   } ]
 } ]

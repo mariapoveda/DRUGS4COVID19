@@ -1,5 +1,8 @@
 {
   "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
     "codigoATC5" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoATC5",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -26,6 +29,13 @@
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
+    "esPrincipioActivoDeMedicamento" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento",
+      "@type" : "@id"
+    },
+    "codigoSNOMED" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoSNOMED"
+    },
     "titulo" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#titulo",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -46,6 +56,10 @@
     },
     "trataEnfermedad" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#trataEnfermedad",
+      "@type" : "@id"
+    },
+    "estaContraindicadoPara" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara",
       "@type" : "@id"
     },
     "menciona" : {
@@ -69,8 +83,14 @@
       "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoATC1",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated"
+    },
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "nombreDesorden" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#nombreDesorden"
     },
     "codigoMesh" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoMesh",
@@ -79,6 +99,10 @@
     "Frase" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#Frase"
     },
+    "esTratadoConMedicamento" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento",
+      "@type" : "@id"
+    },
     "problema" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#problema",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -86,8 +110,19 @@
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
+    "esTratadoCon" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadoCon",
+      "@type" : "@id"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/terms/source",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "publisher" : {
       "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "Desorden" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#Desorden"
     },
     "contiene" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#contiene",
@@ -108,6 +143,14 @@
       "@id" : "https://w3id.org/def/DRUGS4COVID19#codigoATC2",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "trataDesorden" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#trataDesorden",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
@@ -122,13 +165,13 @@
     "Efecto" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#Efecto"
     },
-    "asbtract" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#asbtract",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "licencia" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#licencia",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "trataSintoma" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#trataSintoma",
+      "@type" : "@id"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor"
