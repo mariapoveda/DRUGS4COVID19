@@ -221,9 +221,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Enfermedad"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Desorden"/>
                     <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Medicamento"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Sintoma"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>

@@ -130,9 +130,8 @@
                       ] ;
           rdfs:range [ rdf:type owl:Class ;
                        owl:unionOf ( :CompuestoQuimico
-                                     :Enfermedad
+                                     :Desorden
                                      :Medicamento
-                                     :Sintoma
                                    )
                      ] ;
           rdfs:label "menciona"@es .
