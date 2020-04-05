@@ -151,6 +151,15 @@
     
 
 
+    <!-- https://w3id.org/def/DRUGS4COVID19#esTratadoCon -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/DRUGS4COVID19#esTratadoCon">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/DRUGS4COVID19#trataSintoma"/>
+        <rdfs:label xml:lang="es">es tratado con medicamento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/def/DRUGS4COVID19#menciona -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/DRUGS4COVID19#menciona">
@@ -205,6 +214,14 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/DRUGS4COVID19#trataEnfermedad">
         <rdfs:label xml:lang="es">trata enfermedad</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/DRUGS4COVID19#trataSintoma -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/DRUGS4COVID19#trataSintoma">
+        <rdfs:label xml:lang="es">trata síntoma</rdfs:label>
     </owl:ObjectProperty>
     
 
