@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/def/DRUGS4COVID19#"
      xml:base="https://w3id.org/def/DRUGS4COVID19"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/def/DRUGS4COVID19">
-        <terms:contributor xml:lang="es">Paola Espinoza Arias</terms:contributor>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
-        <terms:contributor xml:lang="es">Carlos Badenes</terms:contributor>
-        <dc:title>Drugs for COVID-19</dc:title>
-        <terms:created xml:lang="es">2020-04-04</terms:created>
-        <terms:contributor xml:lang="es">Pablo Calleja</terms:contributor>
-        <rdfs:seeAlso rdf:resource="https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/"/>
-        <terms:contributor xml:lang="es">Ana Iglesias</terms:contributor>
-        <terms:contributor xml:lang="es">Edna Ruckhaus</terms:contributor>
-        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <terms:contributor rdf:resource="http://purl.org/net/mpoveda"/>
-        <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
-        <terms:contributor xml:lang="es">David Chaves Fraga</terms:contributor>
-        <terms:description xml:lang="es">Esta ontología describe los medicamentos y sus relaciones relacionados con el COVID-19. Se desarrolla en el contexto del hackathon #VenceAlVirus organizado por la Comunidad de Madrid y la Consejería de Ciencia, Universidades e Innovación, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19.</terms:description>
-        <terms:creator rdf:resource="http://www.oeg-upm.net/"/>
-        <terms:contributor xml:lang="es">Socorro Bernardos Galindo</terms:contributor>
-        <terms:description xml:lang="en">This ontology aims to model the drugs and their relations related to the COVID-19 in the context of the Hackathon #VenceAlVirus organised by the Comunidad de Madrid and the Consejería de Ciencia, Universidades e Innovación with the goal of finding answers to the challenges that COVID-19 is posing to the world.</terms:description>
         <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+        <dc:title>Drugs for COVID-19</dc:title>
+        <terms:contributor rdf:resource="http://purl.org/net/mpoveda"/>
         <terms:contributor xml:lang="es">Alba Fernández Izquierdo</terms:contributor>
+        <terms:contributor xml:lang="es">Ana Iglesias</terms:contributor>
+        <terms:contributor xml:lang="es">Carlos Badenes</terms:contributor>
+        <terms:contributor xml:lang="es">David Chaves Fraga</terms:contributor>
+        <terms:contributor xml:lang="es">Edna Ruckhaus</terms:contributor>
+        <terms:contributor xml:lang="es">Pablo Calleja</terms:contributor>
+        <terms:contributor xml:lang="es">Paola Espinoza Arias</terms:contributor>
+        <terms:contributor xml:lang="es">Socorro Bernardos Galindo</terms:contributor>
+        <terms:created xml:lang="es">2020-04-04</terms:created>
+        <terms:creator rdf:resource="http://www.oeg-upm.net/"/>
+        <terms:description xml:lang="es">Esta ontología describe los medicamentos y sus relaciones relacionados con el COVID-19. Se desarrolla en el contexto del hackathon #VenceAlVirus organizado por la Comunidad de Madrid y la Consejería de Ciencia, Universidades e Innovación, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19.</terms:description>
+        <terms:description xml:lang="en">This ontology aims to model the drugs and their relations related to the COVID-19 in the context of the Hackathon #VenceAlVirus organised by the Comunidad de Madrid and the Consejería de Ciencia, Universidades e Innovación with the goal of finding answers to the challenges that COVID-19 is posing to the world.</terms:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
+        <rdfs:seeAlso rdf:resource="https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -200,9 +200,8 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Enfermedad"/>
+                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Desorden"/>
                     <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Medicamento"/>
-                    <rdf:Description rdf:about="https://w3id.org/def/DRUGS4COVID19#Sintoma"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -583,5 +582,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
