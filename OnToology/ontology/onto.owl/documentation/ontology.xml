@@ -29,7 +29,7 @@
         <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
         <rdfs:seeAlso rdf:resource="https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
     </owl:Ontology>
     
 
