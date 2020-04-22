@@ -226,7 +226,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.2"
+    "@value" : "0.3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC1Code",
