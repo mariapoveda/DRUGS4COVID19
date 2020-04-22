@@ -18,7 +18,7 @@
 <https://w3id.org/def/DRUGS4COVID19> <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" .
 <https://w3id.org/def/DRUGS4COVID19> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> .
 <https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/> .
-<https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -67,23 +67,16 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento
-<https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#tieneEfecto> .
-<https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento> <http://www.w3.org/2000/01/rdf-schema#label> "causado por medicamento"@es .
+# https://w3id.org/def/DRUGS4COVID19#causedByDrug
+<https://w3id.org/def/DRUGS4COVID19#causedByDrug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#causedByDrug> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#hasEffect> .
+<https://w3id.org/def/DRUGS4COVID19#causedByDrug> <http://www.w3.org/2000/01/rdf-schema#comment> "caused by drug"@en .
+<https://w3id.org/def/DRUGS4COVID19#causedByDrug> <http://www.w3.org/2000/01/rdf-schema#label> "causado por medicamento"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#contiene
-<https://w3id.org/def/DRUGS4COVID19#contiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#contiene> <http://www.w3.org/2000/01/rdf-schema#label> "contiene"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento
-<https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#esPrincipioActivoDeMedicamento> <http://www.w3.org/2000/01/rdf-schema#label> "es principio activo de medicamento" .
-# 
-# https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad
-<https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> .
-<https://w3id.org/def/DRUGS4COVID19#esSintomaDeEnfermedad> <http://www.w3.org/2000/01/rdf-schema#label> "es síntoma de enfermedad"@es .
+# https://w3id.org/def/DRUGS4COVID19#contains
+<https://w3id.org/def/DRUGS4COVID19#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "contains"@en .
+<https://w3id.org/def/DRUGS4COVID19#contains> <http://www.w3.org/2000/01/rdf-schema#label> "contiene"@es .
 # 
 # https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento
 <https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -91,68 +84,81 @@
 <https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento> <http://www.w3.org/2000/01/rdf-schema#label> "es tratada con medicamento"@es .
 <https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-# https://w3id.org/def/DRUGS4COVID19#esTratadoCon
-<https://w3id.org/def/DRUGS4COVID19#esTratadoCon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#esTratadoCon> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#trataSintoma> .
-<https://w3id.org/def/DRUGS4COVID19#esTratadoCon> <http://www.w3.org/2000/01/rdf-schema#label> "es tratado con medicamento"@es .
+# https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance
+<https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug> .
+<https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance> <http://www.w3.org/2000/01/rdf-schema#comment> "has active substance"@en .
+<https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance> <http://www.w3.org/2000/01/rdf-schema#label> "tiene principio activo"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento
-<https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento> <http://www.w3.org/2000/01/rdf-schema#label> "es tratado con medicamento" .
+# https://w3id.org/def/DRUGS4COVID19#hasEffect
+<https://w3id.org/def/DRUGS4COVID19#hasEffect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#hasEffect> <http://www.w3.org/2000/01/rdf-schema#comment> "has effect"@en .
+<https://w3id.org/def/DRUGS4COVID19#hasEffect> <http://www.w3.org/2000/01/rdf-schema#label> "tiene efecto"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara
-<https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara> <http://www.w3.org/2000/01/rdf-schema#label> "esta contraindicado para" .
+# https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug
+<https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug> <http://www.w3.org/2000/01/rdf-schema#comment> "is active substance of drug"@en .
+<https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug> <http://www.w3.org/2000/01/rdf-schema#label> "es principio activo de medicamento" .
 # 
-# https://w3id.org/def/DRUGS4COVID19#menciona
-<https://w3id.org/def/DRUGS4COVID19#menciona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#menciona> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+# https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo
+<https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "is contraindicated to"@en .
+<https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "esta contraindicado para" .
+# 
+# https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease
+<https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> .
+<https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease> <http://www.w3.org/2000/01/rdf-schema#comment> "is symptom of disease"@en .
+<https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease> <http://www.w3.org/2000/01/rdf-schema#label> "es síntoma de enfermedad"@es .
+# 
+# https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug
+<https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/def/DRUGS4COVID19#treatsDisorder> .
+<https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug> <http://www.w3.org/2000/01/rdf-schema#comment> "is treated with drug"@en .
+<https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug> <http://www.w3.org/2000/01/rdf-schema#label> "es tratado con medicamento"@es .
+# 
+# https://w3id.org/def/DRUGS4COVID19#mentions
+<https://w3id.org/def/DRUGS4COVID19#mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#mentions> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Frase> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Paper> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Paper> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Sentence> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/def/DRUGS4COVID19#menciona> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+<https://w3id.org/def/DRUGS4COVID19#mentions> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid7 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Disease> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Desorden> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Drug> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Medicamento> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/def/DRUGS4COVID19#Symptom> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/def/DRUGS4COVID19#menciona> <http://www.w3.org/2000/01/rdf-schema#label> "menciona"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#tieneEfecto
-<https://w3id.org/def/DRUGS4COVID19#tieneEfecto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#tieneEfecto> <http://www.w3.org/2000/01/rdf-schema#label> "tiene efecto"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#tienePrincipioActivo
-<https://w3id.org/def/DRUGS4COVID19#tienePrincipioActivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#tienePrincipioActivo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene principio activo"@es .
+<https://w3id.org/def/DRUGS4COVID19#mentions> <http://www.w3.org/2000/01/rdf-schema#comment> "mentions"@en .
+<https://w3id.org/def/DRUGS4COVID19#mentions> <http://www.w3.org/2000/01/rdf-schema#label> "menciona"@es .
 # 
 # https://w3id.org/def/DRUGS4COVID19#tieneSintoma
 <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> <http://www.w3.org/2000/01/rdf-schema#label> "tiene síntoma"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#trataDesorden
-<https://w3id.org/def/DRUGS4COVID19#trataDesorden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#trataDesorden> <http://www.w3.org/2000/01/rdf-schema#label> "trata desorden" .
 # 
 # https://w3id.org/def/DRUGS4COVID19#trataEnfermedad
 <https://w3id.org/def/DRUGS4COVID19#trataEnfermedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/DRUGS4COVID19#trataEnfermedad> <http://www.w3.org/2000/01/rdf-schema#label> "trata enfermedad"@es .
 <https://w3id.org/def/DRUGS4COVID19#trataEnfermedad> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
-# https://w3id.org/def/DRUGS4COVID19#trataSintoma
-<https://w3id.org/def/DRUGS4COVID19#trataSintoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/def/DRUGS4COVID19#trataSintoma> <http://www.w3.org/2000/01/rdf-schema#label> "trata síntoma"@es .
+# https://w3id.org/def/DRUGS4COVID19#treatsDisorder
+<https://w3id.org/def/DRUGS4COVID19#treatsDisorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/DRUGS4COVID19#treatsDisorder> <http://www.w3.org/2000/01/rdf-schema#comment> "treats disorder"@en .
+<https://w3id.org/def/DRUGS4COVID19#treatsDisorder> <http://www.w3.org/2000/01/rdf-schema#label> "trata desorden" .
 # 
 # 
 # 
@@ -165,95 +171,114 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "Resumen"@es .
 <http://purl.org/dc/terms/abstract> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract" .
 # 
 # http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#comment> "Date"@en .
 <http://purl.org/dc/terms/date> <http://www.w3.org/2000/01/rdf-schema#label> "Fecha" .
 # 
 # http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#comment> "Fuente"@es .
 <http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#label> "Source" .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoATC1
-<https://w3id.org/def/DRUGS4COVID19#codigoATC1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC1> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC1"@es .
+# https://w3id.org/def/DRUGS4COVID19#ATC1Code
+<https://w3id.org/def/DRUGS4COVID19#ATC1Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#ATC1Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#ATC1Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ATC1 code"@en .
+<https://w3id.org/def/DRUGS4COVID19#ATC1Code> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC1"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoATC2
-<https://w3id.org/def/DRUGS4COVID19#codigoATC2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC2> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC2"@es .
+# https://w3id.org/def/DRUGS4COVID19#ATC2Code
+<https://w3id.org/def/DRUGS4COVID19#ATC2Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#ATC2Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#ATC2Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ATC2 code"@en .
+<https://w3id.org/def/DRUGS4COVID19#ATC2Code> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC2"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoATC3
-<https://w3id.org/def/DRUGS4COVID19#codigoATC3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC3> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC3> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC3"@es .
+# https://w3id.org/def/DRUGS4COVID19#ATC3Code
+<https://w3id.org/def/DRUGS4COVID19#ATC3Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#ATC3Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#ATC3Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ATC3 code"@en .
+<https://w3id.org/def/DRUGS4COVID19#ATC3Code> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC3"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoATC4
-<https://w3id.org/def/DRUGS4COVID19#codigoATC4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC4> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC4> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC4"@es .
+# https://w3id.org/def/DRUGS4COVID19#ATC4Code
+<https://w3id.org/def/DRUGS4COVID19#ATC4Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#ATC4Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#ATC4Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ATC4 code"@en .
+<https://w3id.org/def/DRUGS4COVID19#ATC4Code> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC4"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoATC5
-<https://w3id.org/def/DRUGS4COVID19#codigoATC5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC5> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoATC5> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC5"@es .
+# https://w3id.org/def/DRUGS4COVID19#ATC5Code
+<https://w3id.org/def/DRUGS4COVID19#ATC5Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#ATC5Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#ATC5Code> <http://www.w3.org/2000/01/rdf-schema#comment> "ATC5 code"@en .
+<https://w3id.org/def/DRUGS4COVID19#ATC5Code> <http://www.w3.org/2000/01/rdf-schema#label> "Código ATC5"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoMesh
-<https://w3id.org/def/DRUGS4COVID19#codigoMesh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoMesh> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#codigoMesh> <http://www.w3.org/2000/01/rdf-schema#label> "Código MESH"@es .
+# https://w3id.org/def/DRUGS4COVID19#MESHCode
+<https://w3id.org/def/DRUGS4COVID19#MESHCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#MESHCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#MESHCode> <http://www.w3.org/2000/01/rdf-schema#comment> "MESH code"@en .
+<https://w3id.org/def/DRUGS4COVID19#MESHCode> <http://www.w3.org/2000/01/rdf-schema#label> "Código MESH"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#codigoSNOMED
-<https://w3id.org/def/DRUGS4COVID19#codigoSNOMED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#codigoSNOMED> <http://www.w3.org/2000/01/rdf-schema#label> "Código SNOMED" .
+# https://w3id.org/def/DRUGS4COVID19#SNOMEDCode
+<https://w3id.org/def/DRUGS4COVID19#SNOMEDCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#SNOMEDCode> <http://www.w3.org/2000/01/rdf-schema#comment> "SNOMED code"@en .
+<https://w3id.org/def/DRUGS4COVID19#SNOMEDCode> <http://www.w3.org/2000/01/rdf-schema#label> "Código SNOMED" .
 # 
-# https://w3id.org/def/DRUGS4COVID19#identificador
-<https://w3id.org/def/DRUGS4COVID19#identificador> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#identificador> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#identificador> <http://www.w3.org/2000/01/rdf-schema#label> "Identificador"@es .
+# https://w3id.org/def/DRUGS4COVID19#activeSubstanceName
+<https://w3id.org/def/DRUGS4COVID19#activeSubstanceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#activeSubstanceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#activeSubstanceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Active substance name"@en .
+<https://w3id.org/def/DRUGS4COVID19#activeSubstanceName> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del princpio activo"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#licencia
-<https://w3id.org/def/DRUGS4COVID19#licencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#licencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#licencia> <http://www.w3.org/2000/01/rdf-schema#label> "Licencia"@es .
+# https://w3id.org/def/DRUGS4COVID19#disorderName
+<https://w3id.org/def/DRUGS4COVID19#disorderName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#disorderName> <http://www.w3.org/2000/01/rdf-schema#comment> "Disorder name"@en .
+<https://w3id.org/def/DRUGS4COVID19#disorderName> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del desorden" .
 # 
-# https://w3id.org/def/DRUGS4COVID19#nombreCientifico
-<https://w3id.org/def/DRUGS4COVID19#nombreCientifico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#nombreCientifico> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#nombreCientifico> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre científico"@es .
+# https://w3id.org/def/DRUGS4COVID19#drugName
+<https://w3id.org/def/DRUGS4COVID19#drugName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#drugName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#drugName> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug name"@en .
+<https://w3id.org/def/DRUGS4COVID19#drugName> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del medicamento"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#nombreDesorden
-<https://w3id.org/def/DRUGS4COVID19#nombreDesorden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#nombreDesorden> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del desorden" .
+# https://w3id.org/def/DRUGS4COVID19#identifier
+<https://w3id.org/def/DRUGS4COVID19#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier"@en .
+<https://w3id.org/def/DRUGS4COVID19#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identificador"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#nombreMedicamento
-<https://w3id.org/def/DRUGS4COVID19#nombreMedicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#nombreMedicamento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#nombreMedicamento> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del medicamento"@es .
+# https://w3id.org/def/DRUGS4COVID19#license
+<https://w3id.org/def/DRUGS4COVID19#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#license> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#license> <http://www.w3.org/2000/01/rdf-schema#comment> "License"@en .
+<https://w3id.org/def/DRUGS4COVID19#license> <http://www.w3.org/2000/01/rdf-schema#label> "Licencia"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#nombrePrincipioActivo
-<https://w3id.org/def/DRUGS4COVID19#nombrePrincipioActivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#nombrePrincipioActivo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#nombrePrincipioActivo> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre del princpio activo"@es .
+# https://w3id.org/def/DRUGS4COVID19#problem
+<https://w3id.org/def/DRUGS4COVID19#problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#problem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#problem> <http://www.w3.org/2000/01/rdf-schema#comment> "Problem"@en .
+<https://w3id.org/def/DRUGS4COVID19#problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problema"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#problema
-<https://w3id.org/def/DRUGS4COVID19#problema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#problema> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#problema> <http://www.w3.org/2000/01/rdf-schema#label> "Problema"@es .
+# https://w3id.org/def/DRUGS4COVID19#scientificName
+<https://w3id.org/def/DRUGS4COVID19#scientificName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#scientificName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#scientificName> <http://www.w3.org/2000/01/rdf-schema#comment> "Scientific name"@en .
+<https://w3id.org/def/DRUGS4COVID19#scientificName> <http://www.w3.org/2000/01/rdf-schema#label> "Nombre científico"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#texto
-<https://w3id.org/def/DRUGS4COVID19#texto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#texto> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#texto> <http://www.w3.org/2000/01/rdf-schema#label> "Texto"@es .
+# https://w3id.org/def/DRUGS4COVID19#text
+<https://w3id.org/def/DRUGS4COVID19#text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#text> <http://www.w3.org/2000/01/rdf-schema#comment> "Text"@en .
+<https://w3id.org/def/DRUGS4COVID19#text> <http://www.w3.org/2000/01/rdf-schema#label> "Texto"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#titulo
-<https://w3id.org/def/DRUGS4COVID19#titulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/DRUGS4COVID19#titulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/DRUGS4COVID19#titulo> <http://www.w3.org/2000/01/rdf-schema#label> "Título"@es .
+# https://w3id.org/def/DRUGS4COVID19#title
+<https://w3id.org/def/DRUGS4COVID19#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/DRUGS4COVID19#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/DRUGS4COVID19#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title"@en .
+<https://w3id.org/def/DRUGS4COVID19#title> <http://www.w3.org/2000/01/rdf-schema#label> "Título"@es .
 # 
 # 
 # 
@@ -266,78 +291,83 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://purl.org/dc/terms/BibliographicResource
 <http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Bibliographic resource"@en .
 <http://purl.org/dc/terms/BibliographicResource> <http://www.w3.org/2000/01/rdf-schema#label> "Recurso bibliográfico"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico
-<https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico> <http://www.w3.org/2000/01/rdf-schema#label> "Compuesto quimico"@es .
+# https://w3id.org/def/DRUGS4COVID19#Active_substance
+<https://w3id.org/def/DRUGS4COVID19#Active_substance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Active_substance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance> .
+<https://w3id.org/def/DRUGS4COVID19#Active_substance> <http://www.w3.org/2000/01/rdf-schema#comment> "Active substance"@en .
+<https://w3id.org/def/DRUGS4COVID19#Active_substance> <http://www.w3.org/2000/01/rdf-schema#label> "Principio activo"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#Desorden
-<https://w3id.org/def/DRUGS4COVID19#Desorden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Desorden> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#esTratadoConMedicamento> .
-_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Medicamento> .
-<https://w3id.org/def/DRUGS4COVID19#Desorden> <http://www.w3.org/2000/01/rdf-schema#label> "Desorden" .
+# https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance
+<https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical substance"@en .
+<https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#label> "Compuesto quimico"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#Efecto
-<https://w3id.org/def/DRUGS4COVID19#Efecto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Efecto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+# https://w3id.org/def/DRUGS4COVID19#Disease
+<https://w3id.org/def/DRUGS4COVID19#Disease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Disease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#Disorder> .
+<https://w3id.org/def/DRUGS4COVID19#Disease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#causadoPorMedicamento> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Medicamento> .
-<https://w3id.org/def/DRUGS4COVID19#Efecto> <http://www.w3.org/2000/01/rdf-schema#label> "Efecto"@es .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Symptom> .
+<https://w3id.org/def/DRUGS4COVID19#Disease> <http://www.w3.org/2000/01/rdf-schema#comment> "Disease"@en .
+<https://w3id.org/def/DRUGS4COVID19#Disease> <http://www.w3.org/2000/01/rdf-schema#label> "Enfermedad"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#Enfermedad
-<https://w3id.org/def/DRUGS4COVID19#Enfermedad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Enfermedad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#Desorden> .
-<https://w3id.org/def/DRUGS4COVID19#Enfermedad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+# https://w3id.org/def/DRUGS4COVID19#Disorder
+<https://w3id.org/def/DRUGS4COVID19#Disorder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Disorder> <http://www.w3.org/2000/01/rdf-schema#comment> "Disorder"@en .
+<https://w3id.org/def/DRUGS4COVID19#Disorder> <http://www.w3.org/2000/01/rdf-schema#label> "Desorden" .
+# 
+# https://w3id.org/def/DRUGS4COVID19#Drug
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#tieneSintoma> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Sintoma> .
-<https://w3id.org/def/DRUGS4COVID19#Enfermedad> <http://www.w3.org/2000/01/rdf-schema#label> "Enfermedad"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#Frase
-<https://w3id.org/def/DRUGS4COVID19#Frase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Frase> <http://www.w3.org/2000/01/rdf-schema#label> "Frase"@es .
-# 
-# https://w3id.org/def/DRUGS4COVID19#Medicamento
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Active_substance> .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#estaContraindicadoPara> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Desorden> .
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#hasEffect> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Effect> .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#tieneEfecto> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Efecto> .
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Disorder> .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#tienePrincipioActivo> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#PrincipioActivo> .
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#treatsDisorder> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Disorder> .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#comment> "Drug"@en .
+<https://w3id.org/def/DRUGS4COVID19#Drug> <http://www.w3.org/2000/01/rdf-schema#label> "Medicamento"@es .
+# 
+# https://w3id.org/def/DRUGS4COVID19#Effect
+<https://w3id.org/def/DRUGS4COVID19#Effect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Effect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#trataDesorden> .
-_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Desorden> .
-<https://w3id.org/def/DRUGS4COVID19#Medicamento> <http://www.w3.org/2000/01/rdf-schema#label> "Medicamento"@es .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#causedByDrug> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Drug> .
+<https://w3id.org/def/DRUGS4COVID19#Effect> <http://www.w3.org/2000/01/rdf-schema#comment> "Effect"@en .
+<https://w3id.org/def/DRUGS4COVID19#Effect> <http://www.w3.org/2000/01/rdf-schema#label> "Efecto"@es .
 # 
 # https://w3id.org/def/DRUGS4COVID19#Paper
 <https://w3id.org/def/DRUGS4COVID19#Paper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/DRUGS4COVID19#Paper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/BibliographicResource> .
 <https://w3id.org/def/DRUGS4COVID19#Paper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#contiene> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Frase> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/DRUGS4COVID19#contains> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/DRUGS4COVID19#Sentence> .
 <https://w3id.org/def/DRUGS4COVID19#Paper> <http://www.w3.org/2000/01/rdf-schema#label> "Paper"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#PrincipioActivo
-<https://w3id.org/def/DRUGS4COVID19#PrincipioActivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#PrincipioActivo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#CompuestoQuimico> .
-<https://w3id.org/def/DRUGS4COVID19#PrincipioActivo> <http://www.w3.org/2000/01/rdf-schema#label> "Principio activo"@es .
+# https://w3id.org/def/DRUGS4COVID19#Sentence
+<https://w3id.org/def/DRUGS4COVID19#Sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "Sentence"@en .
+<https://w3id.org/def/DRUGS4COVID19#Sentence> <http://www.w3.org/2000/01/rdf-schema#label> "Frase"@es .
 # 
-# https://w3id.org/def/DRUGS4COVID19#Sintoma
-<https://w3id.org/def/DRUGS4COVID19#Sintoma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/DRUGS4COVID19#Sintoma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#Desorden> .
-<https://w3id.org/def/DRUGS4COVID19#Sintoma> <http://www.w3.org/2000/01/rdf-schema#label> "Síntoma"@es .
+# https://w3id.org/def/DRUGS4COVID19#Symptom
+<https://w3id.org/def/DRUGS4COVID19#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/DRUGS4COVID19#Symptom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/DRUGS4COVID19#Disorder> .
+<https://w3id.org/def/DRUGS4COVID19#Symptom> <http://www.w3.org/2000/01/rdf-schema#comment> "Symptom"@en .
+<https://w3id.org/def/DRUGS4COVID19#Symptom> <http://www.w3.org/2000/01/rdf-schema#label> "Síntoma"@es .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
