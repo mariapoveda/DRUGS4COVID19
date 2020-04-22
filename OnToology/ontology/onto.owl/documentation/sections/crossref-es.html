@@ -1,7 +1,7 @@
-<html><h2 id="crossreference" class="list">T&eacute;rminos de Drugs for COVID-19 para clases, propiedades y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<h2  id="crossreference" class="list">T&eacute;rminos de Drugs for COVID-19 para clases, propiedades y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
 Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Drugs for COVID-19.
 <div id="classes">
-   <h3 id="classes-headline" class="list">Clases</h3>
+   <h3 id="classes" class="list">Clases</h3>
    <ul class="hlist">
       <li>
          <a href="#ChemicalSubstance"
@@ -86,7 +86,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>
-         <dd/>
+         <dd>
+            <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">causado por medicamento</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Drug" title="https://w3id.org/def/DRUGS4COVID19#Drug">Medicamento</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Disease">
@@ -103,6 +109,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#tieneSintoma" title="https://w3id.org/def/DRUGS4COVID19#tieneSintoma">tiene síntoma</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Symptom" title="https://w3id.org/def/DRUGS4COVID19#Symptom">Síntoma</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -130,7 +143,38 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </div>
       <dl class="description">
          <dt>tiene superclases</dt>
-         <dd/>
+         <dd>
+            <a href="#hasActiveSubstance"
+               title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">tiene principio activo</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Active_substance"
+               title="https://w3id.org/def/DRUGS4COVID19#Active_substance">Principio activo</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">tiene efecto</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Effect" title="https://w3id.org/def/DRUGS4COVID19#Effect">Efecto</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#isContraindicatedTo"
+               title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">esta contraindicado para</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#treatsDisorder"
+               title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">trata desorden</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Paper">
@@ -144,6 +188,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Recurso bibliográfico</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">contiene</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Frase</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -521,7 +572,7 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </div>
    </div>
 </div><div id="dataproperties">
-   <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+   <h3 id="dataproperties" class="list">Propiedades de datos</h3>
    <ul class="hlist">
       <li>
          <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Abstract</a>
@@ -929,4 +980,3 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
 <sup class="type-ni" title="Individuos">ni</sup>: Individuos
 </div>
 </div>
-</html>

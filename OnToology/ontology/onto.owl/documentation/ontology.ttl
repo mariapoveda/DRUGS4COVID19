@@ -8,7 +8,7 @@
 
 <https://w3id.org/def/DRUGS4COVID19> rdf:type owl:Ontology ;
                                       <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> ;
-                                      <http://purl.org/dc/elements/1.1/title> "Drugs for COVID-19" ;
+                                      <http://purl.org/dc/elements/1.1/title> "Drugs for COVID-19"^^xsd:string ;
                                       <http://purl.org/dc/terms/contributor> <http://purl.org/net/mpoveda> ,
                                                                              "Alba Fernández Izquierdo"@es ,
                                                                              "Ana Iglesias"@es ,
@@ -23,7 +23,7 @@
                                       <http://purl.org/dc/terms/description> "Esta ontología describe los medicamentos y sus relaciones relacionados con el COVID-19. Se desarrolla en el contexto del hackathon #VenceAlVirus organizado por la Comunidad de Madrid y la Consejería de Ciencia, Universidades e Innovación, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."@es ,
                                                                              "This ontology aims to model the drugs and their relations related to the COVID-19 in the context of the Hackathon #VenceAlVirus organised by the Comunidad de Madrid and the Consejería de Ciencia, Universidades e Innovación with the goal of finding answers to the challenges that COVID-19 is posing to the world."@en ;
                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid"^^xsd:string ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> ;
                                       rdfs:seeAlso <https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/> ;
                                       owl:versionInfo 0.3 .
@@ -112,13 +112,13 @@
 ###  https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug
 :isActiveSubstanceOfDrug rdf:type owl:ObjectProperty ;
                          rdfs:comment "is active substance of drug"@en ;
-                         rdfs:label "es principio activo de medicamento" .
+                         rdfs:label "es principio activo de medicamento"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo
 :isContraindicatedTo rdf:type owl:ObjectProperty ;
                      rdfs:comment "is contraindicated to"@en ;
-                     rdfs:label "esta contraindicado para" .
+                     rdfs:label "esta contraindicado para"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease
@@ -167,7 +167,7 @@
 ###  https://w3id.org/def/DRUGS4COVID19#treatsDisorder
 :treatsDisorder rdf:type owl:ObjectProperty ;
                 rdfs:comment "treats disorder"@en ;
-                rdfs:label "trata desorden" .
+                rdfs:label "trata desorden"^^xsd:string .
 
 
 #################################################################
@@ -177,21 +177,21 @@
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:DatatypeProperty ;
                                     rdfs:comment "Resumen"@es ;
-                                    rdfs:label "Abstract" .
+                                    rdfs:label "Abstract"^^xsd:string .
 
 
 ###  http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
                                 rdfs:range rdfs:Literal ;
                                 rdfs:comment "Date"@en ;
-                                rdfs:label "Fecha" .
+                                rdfs:label "Fecha"^^xsd:string .
 
 
 ###  http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> rdf:type owl:DatatypeProperty ;
                                   rdfs:range xsd:string ;
                                   rdfs:comment "Fuente"@es ;
-                                  rdfs:label "Source" .
+                                  rdfs:label "Source"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#ATC1Code
@@ -239,7 +239,7 @@
 ###  https://w3id.org/def/DRUGS4COVID19#SNOMEDCode
 :SNOMEDCode rdf:type owl:DatatypeProperty ;
             rdfs:comment "SNOMED code"@en ;
-            rdfs:label "Código SNOMED" .
+            rdfs:label "Código SNOMED"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#activeSubstanceName
@@ -252,7 +252,7 @@
 ###  https://w3id.org/def/DRUGS4COVID19#disorderName
 :disorderName rdf:type owl:DatatypeProperty ;
               rdfs:comment "Disorder name"@en ;
-              rdfs:label "Nombre del desorden" .
+              rdfs:label "Nombre del desorden"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#drugName
@@ -341,7 +341,7 @@
 ###  https://w3id.org/def/DRUGS4COVID19#Disorder
 :Disorder rdf:type owl:Class ;
           rdfs:comment "Disorder"@en ;
-          rdfs:label "Desorden" .
+          rdfs:label "Desorden"^^xsd:string .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#Drug
@@ -399,4 +399,4 @@
          rdfs:label "Síntoma"@es .
 
 
-###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
