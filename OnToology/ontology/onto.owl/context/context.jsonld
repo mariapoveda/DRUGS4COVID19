@@ -36,6 +36,13 @@
       "@id" : "https://w3id.org/def/DRUGS4COVID19#scientificName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "ActiveSubstance" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#ActiveSubstance"
+    },
+    "hasSymptom" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#hasSymptom",
+      "@type" : "@id"
+    },
     "isTreatedWithDrug" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug",
       "@type" : "@id"
@@ -153,9 +160,6 @@
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
-    "Active_substance" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#Active_substance"
-    },
     "hasActiveSubstance" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance",
       "@type" : "@id"
@@ -166,9 +170,6 @@
     "problem" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#problem",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor"
@@ -183,10 +184,6 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
-    },
-    "tieneSintoma" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#tieneSintoma",
-      "@type" : "@id"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
