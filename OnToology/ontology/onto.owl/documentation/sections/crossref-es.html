@@ -8,7 +8,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             title="https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance">Compuesto quimico</a>
       </li>
       <li>
-         <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+         <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Comunicación</a>
+      </li>
+      <li>
+         <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
       </li>
       <li>
          <a href="#Effect" title="https://w3id.org/def/DRUGS4COVID19#Effect">Efecto</a>
@@ -23,11 +26,8 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#Drug" title="https://w3id.org/def/DRUGS4COVID19#Drug">Medicamento</a>
       </li>
       <li>
-         <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Paper</a>
-      </li>
-      <li>
-         <a href="#Active_substance"
-            title="https://w3id.org/def/DRUGS4COVID19#Active_substance">Principio activo</a>
+         <a href="#ActiveSubstance"
+            title="https://w3id.org/def/DRUGS4COVID19#ActiveSubstance">Principio activo</a>
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Recurso bibliográfico</a>
@@ -43,28 +43,44 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance</p>
-      <div class="comment">
-         <span class="markdown">Chemical substance</span>
-      </div>
       <dl class="description">
          <dt>tiene subclases</dt>
          <dd>
-            <a href="#Active_substance"
-               title="https://w3id.org/def/DRUGS4COVID19#Active_substance">Principio activo</a>
+            <a href="#ActiveSubstance"
+               title="https://w3id.org/def/DRUGS4COVID19#ActiveSubstance">Principio activo</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Paper">
+      <h3>Comunicación<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Paper</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Recurso bibliográfico</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dd>
+            <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">Contiene</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Frase</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="Disorder">
-      <h3>Desorden<sup class="type-c" title="clase">c</sup>
+      <h3>Disorder<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Disorder</p>
-      <div class="comment">
-         <span class="markdown">Disorder</span>
-      </div>
       <dl class="description">
          <dt>tiene subclases</dt>
          <dd>
@@ -81,13 +97,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Effect</p>
-      <div class="comment">
-         <span class="markdown">Effect</span>
-      </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">causado por medicamento</a>
+            <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">Causado por medicamento</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
             <a href="#Drug" title="https://w3id.org/def/DRUGS4COVID19#Drug">Medicamento</a>
@@ -102,17 +115,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Disease</p>
-      <div class="comment">
-         <span class="markdown">Disease</span>
-      </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
-            <a href="#tieneSintoma" title="https://w3id.org/def/DRUGS4COVID19#tieneSintoma">tiene síntoma</a>
+            <a href="#hasSymptom" title="https://w3id.org/def/DRUGS4COVID19#hasSymptom">Tiene síntoma</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
             <a href="#Symptom" title="https://w3id.org/def/DRUGS4COVID19#Symptom">Síntoma</a>
@@ -127,9 +137,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Sentence</p>
-      <div class="comment">
-         <span class="markdown">Sentence</span>
-      </div>
    </div>
    <div class="entity" id="Drug">
       <h3>Medicamento<sup class="type-c" title="clase">c</sup>
@@ -138,22 +145,19 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Drug</p>
-      <div class="comment">
-         <span class="markdown">Drug</span>
-      </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
             <a href="#hasActiveSubstance"
-               title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">tiene principio activo</a>
+               title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">Tiene principio activo</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Active_substance"
-               title="https://w3id.org/def/DRUGS4COVID19#Active_substance">Principio activo</a>
+            <a href="#ActiveSubstance"
+               title="https://w3id.org/def/DRUGS4COVID19#ActiveSubstance">Principio activo</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
-            <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">tiene efecto</a>
+            <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">Tiene efecto</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
             <a href="#Effect" title="https://w3id.org/def/DRUGS4COVID19#Effect">Efecto</a>
@@ -161,54 +165,29 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dd>
          <dd>
             <a href="#isContraindicatedTo"
-               title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">esta contraindicado para</a>
+               title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">Está contraindicado para</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
          <dd>
             <a href="#treatsDisorder"
-               title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">trata desorden</a>
+               title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">Trata desorden</a>
             <sup class="type-op" title="Propiedad entre objetos">op</sup> 
             <span class="logic">some</span> 
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Paper">
-      <h3>Paper<sup class="type-c" title="clase">c</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Paper</p>
-      <dl class="description">
-         <dt>tiene superclases</dt>
-         <dd>
-            <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Recurso bibliográfico</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-         <dd>
-            <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">contiene</a>
-            <sup class="type-op" title="Propiedad entre objetos">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Frase</a>
-            <sup class="type-c" title="clase">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Active_substance">
+   <div class="entity" id="ActiveSubstance">
       <h3>Principio activo<sup class="type-c" title="clase">c</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Active_substance</p>
-      <div class="comment">
-         <span class="markdown">Active substance</span>
-      </div>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ActiveSubstance</p>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
@@ -225,13 +204,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/BibliographicResource</p>
-      <div class="comment">
-         <span class="markdown">Bibliographic resource</span>
-      </div>
       <dl class="description">
          <dt>tiene subclases</dt>
          <dd>
-            <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Paper</a>
+            <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Comunicación</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -243,13 +219,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Symptom</p>
-      <div class="comment">
-         <span class="markdown">Symptom</span>
-      </div>
       <dl class="description">
          <dt>tiene superclases</dt>
          <dd>
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Desorden</a>
+            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -258,18 +231,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    <h2>Propiedades entre objetos</h2>
    <ul class="hlist">
       <li>
-         <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">causado por medicamento</a>
+         <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">Causado por medicamento</a>
       </li>
       <li>
-         <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">contiene</a>
+         <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">Contiene</a>
       </li>
       <li>
          <a href="#isActiveSubstanceOfDrug"
-            title="https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug">es principio activo de medicamento</a>
+            title="https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug">Es principio activo de medicamento</a>
       </li>
       <li>
          <a href="#isSymptomOfDisease"
-            title="https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease">es síntoma de enfermedad</a>
+            title="https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease">Es síntoma de enfermedad</a>
       </li>
       <li>
          <a href="#esTratadaConMedicamento"
@@ -277,28 +250,28 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </li>
       <li>
          <a href="#isTreatedWithDrug"
-            title="https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug">es tratado con medicamento</a>
+            title="https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug">Es tratado con medicamento</a>
       </li>
       <li>
          <a href="#isContraindicatedTo"
-            title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">esta contraindicado para</a>
+            title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">Está contraindicado para</a>
       </li>
       <li>
-         <a href="#mentions" title="https://w3id.org/def/DRUGS4COVID19#mentions">menciona</a>
+         <a href="#mentions" title="https://w3id.org/def/DRUGS4COVID19#mentions">Menciona</a>
       </li>
       <li>
-         <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">tiene efecto</a>
+         <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">Tiene efecto</a>
       </li>
       <li>
          <a href="#hasActiveSubstance"
-            title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">tiene principio activo</a>
+            title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">Tiene principio activo</a>
       </li>
       <li>
-         <a href="#tieneSintoma" title="https://w3id.org/def/DRUGS4COVID19#tieneSintoma">tiene síntoma</a>
+         <a href="#hasSymptom" title="https://w3id.org/def/DRUGS4COVID19#hasSymptom">Tiene síntoma</a>
       </li>
       <li>
          <a href="#treatsDisorder"
-            title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">trata desorden</a>
+            title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">Trata desorden</a>
       </li>
       <li>
          <a href="#trataEnfermedad"
@@ -306,72 +279,60 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </li>
    </ul>
    <div class="entity" id="causedByDrug">
-      <h3>causado por medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Causado por medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#causedByDrug</p>
-      <div class="comment">
-         <span class="markdown">caused by drug</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
-               <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">tiene efecto</a>
+               <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">Tiene efecto</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="contains">
-      <h3>contiene<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Contiene<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#contains</p>
-      <div class="comment">
-         <span class="markdown">contains</span>
-      </div>
    </div>
    <div class="entity" id="isActiveSubstanceOfDrug">
-      <h3>es principio activo de medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Es principio activo de medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug</p>
-      <div class="comment">
-         <span class="markdown">is active substance of drug</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
                <a href="#hasActiveSubstance"
-                  title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">tiene principio activo</a>
+                  title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">Tiene principio activo</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isSymptomOfDisease">
-      <h3>es síntoma de enfermedad<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Es síntoma de enfermedad<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease</p>
-      <div class="comment">
-         <span class="markdown">is symptom of disease</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
-               <a href="#tieneSintoma" title="https://w3id.org/def/DRUGS4COVID19#tieneSintoma">tiene síntoma</a>
+               <a href="#hasSymptom" title="https://w3id.org/def/DRUGS4COVID19#hasSymptom">Tiene síntoma</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
@@ -400,52 +361,43 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </div>
    </div>
    <div class="entity" id="isTreatedWithDrug">
-      <h3>es tratado con medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Es tratado con medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug</p>
-      <div class="comment">
-         <span class="markdown">is treated with drug</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
                <a href="#treatsDisorder"
-                  title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">trata desorden</a>
+                  title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">Trata desorden</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="isContraindicatedTo">
-      <h3>esta contraindicado para<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Está contraindicado para<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo</p>
-      <div class="comment">
-         <span class="markdown">is contraindicated to</span>
-      </div>
    </div>
    <div class="entity" id="mentions">
-      <h3>menciona<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Menciona<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#mentions</p>
-      <div class="comment">
-         <span class="markdown">mentions</span>
-      </div>
       <div class="description">
          <dl>
             <dt>dominio</dt>
             <dd>
-               <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Paper</a>
+               <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Comunicación</a>
                <sup class="type-c" title="clase">c</sup> 
                <span class="logic">or</span> 
                <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Frase</a>
@@ -470,80 +422,71 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </div>
    </div>
    <div class="entity" id="hasEffect">
-      <h3>tiene efecto<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Tiene efecto<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#hasEffect</p>
-      <div class="comment">
-         <span class="markdown">has effect</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
-               <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">causado por medicamento</a>
+               <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">Causado por medicamento</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="hasActiveSubstance">
-      <h3>tiene principio activo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Tiene principio activo<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance</p>
-      <div class="comment">
-         <span class="markdown">has active substance</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
                <a href="#isActiveSubstanceOfDrug"
-                  title="https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug">es principio activo de medicamento</a>
+                  title="https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug">Es principio activo de medicamento</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="tieneSintoma">
-      <h3>tiene síntoma<sup class="type-op" title="Propiedad entre objetos">op</sup>
+   <div class="entity" id="hasSymptom">
+      <h3>Tiene síntoma<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#tieneSintoma</p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#hasSymptom</p>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
                <a href="#isSymptomOfDisease"
-                  title="https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease">es síntoma de enfermedad</a>
+                  title="https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease">Es síntoma de enfermedad</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="treatsDisorder">
-      <h3>trata desorden<sup class="type-op" title="Propiedad entre objetos">op</sup>
+      <h3>Trata desorden<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#treatsDisorder</p>
-      <div class="comment">
-         <span class="markdown">treats disorder</span>
-      </div>
       <div class="description">
          <dl>
             <dt>inversa de</dt>
             <dd>
                <a href="#isTreatedWithDrug"
-                  title="https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug">es tratado con medicamento</a>
+                  title="https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug">Es tratado con medicamento</a>
                <sup class="type-op" title="Propiedad entre objetos">op</sup>
             </dd>
          </dl>
@@ -575,9 +518,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
    <h3 id="dataproperties" class="list">Propiedades de datos</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Abstract</a>
-      </li>
-      <li>
          <a href="#ATC1Code" title="https://w3id.org/def/DRUGS4COVID19#ATC1Code">Código ATC1</a>
       </li>
       <li>
@@ -596,10 +536,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#MESHCode" title="https://w3id.org/def/DRUGS4COVID19#MESHCode">Código MESH</a>
       </li>
       <li>
-         <a href="#SNOMEDCode" title="https://w3id.org/def/DRUGS4COVID19#SNOMEDCode">Código SNOMED</a>
+         <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">Date</a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/date" title="http://purl.org/dc/terms/date">Fecha</a>
+         <a href="#disorderName" title="https://w3id.org/def/DRUGS4COVID19#disorderName">Disorder name</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">Fuente</a>
       </li>
       <li>
          <a href="#identifier" title="https://w3id.org/def/DRUGS4COVID19#identifier">Identificador</a>
@@ -612,9 +555,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             title="https://w3id.org/def/DRUGS4COVID19#scientificName">Nombre científico</a>
       </li>
       <li>
-         <a href="#disorderName" title="https://w3id.org/def/DRUGS4COVID19#disorderName">Nombre del desorden</a>
-      </li>
-      <li>
          <a href="#drugName" title="https://w3id.org/def/DRUGS4COVID19#drugName">Nombre del medicamento</a>
       </li>
       <li>
@@ -625,7 +565,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#problem" title="https://w3id.org/def/DRUGS4COVID19#problem">Problema</a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">Source</a>
+         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Resumen</a>
+      </li>
+      <li>
+         <a href="#SNOMEDCode" title="https://w3id.org/def/DRUGS4COVID19#SNOMEDCode">SNOMED code</a>
       </li>
       <li>
          <a href="#text" title="https://w3id.org/def/DRUGS4COVID19#text">Texto</a>
@@ -634,17 +577,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#title" title="https://w3id.org/def/DRUGS4COVID19#title">Título</a>
       </li>
    </ul>
-   <div class="entity" id="http://purl.org/dc/terms/abstract">
-      <h3>Abstract<sup class="type-dp" title="Propiedad de datos">dp</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
-      <div class="comment">
-         <span class="markdown">Resumen</span>
-      </div>
-   </div>
    <div class="entity" id="ATC1Code">
       <h3>Código ATC1<sup class="type-dp" title="Propiedad de datos">dp</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
@@ -652,9 +584,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ATC1Code</p>
-      <div class="comment">
-         <span class="markdown">ATC1 code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -671,9 +600,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ATC2Code</p>
-      <div class="comment">
-         <span class="markdown">ATC2 code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -690,9 +616,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ATC3Code</p>
-      <div class="comment">
-         <span class="markdown">ATC3 code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -709,9 +632,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ATC4Code</p>
-      <div class="comment">
-         <span class="markdown">ATC4 code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -728,9 +648,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#ATC5Code</p>
-      <div class="comment">
-         <span class="markdown">ATC5 code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -747,9 +664,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#MESHCode</p>
-      <div class="comment">
-         <span class="markdown">MESH code</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -759,32 +673,42 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dl>
       </div>
    </div>
-   <div class="entity" id="SNOMEDCode">
-      <h3>Código SNOMED<sup class="type-dp" title="Propiedad de datos">dp</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#SNOMEDCode</p>
-      <div class="comment">
-         <span class="markdown">SNOMED code</span>
-      </div>
-   </div>
    <div class="entity" id="http://purl.org/dc/terms/date">
-      <h3>Fecha<sup class="type-dp" title="Propiedad de datos">dp</sup>
+      <h3>Date<sup class="type-dp" title="Propiedad de datos">dp</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/date</p>
-      <div class="comment">
-         <span class="markdown">Date</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="disorderName">
+      <h3>Disorder name<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#disorderName</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/source">
+      <h3>Fuente<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -796,9 +720,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#identifier</p>
-      <div class="comment">
-         <span class="markdown">Identifier</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -815,9 +736,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#license</p>
-      <div class="comment">
-         <span class="markdown">License</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -834,9 +752,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#scientificName</p>
-      <div class="comment">
-         <span class="markdown">Scientific name</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -846,17 +761,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dl>
       </div>
    </div>
-   <div class="entity" id="disorderName">
-      <h3>Nombre del desorden<sup class="type-dp" title="Propiedad de datos">dp</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#disorderName</p>
-      <div class="comment">
-         <span class="markdown">Disorder name</span>
-      </div>
-   </div>
    <div class="entity" id="drugName">
       <h3>Nombre del medicamento<sup class="type-dp" title="Propiedad de datos">dp</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
@@ -864,9 +768,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#drugName</p>
-      <div class="comment">
-         <span class="markdown">Drug name</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -883,9 +784,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#activeSubstanceName</p>
-      <div class="comment">
-         <span class="markdown">Active substance name</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -902,9 +800,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#problem</p>
-      <div class="comment">
-         <span class="markdown">Problem</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -914,24 +809,21 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://purl.org/dc/terms/source">
-      <h3>Source<sup class="type-dp" title="Propiedad de datos">dp</sup>
+   <div class="entity" id="http://purl.org/dc/terms/abstract">
+      <h3>Resumen<sup class="type-dp" title="Propiedad de datos">dp</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/source</p>
-      <div class="comment">
-         <span class="markdown">Fuente</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>rango</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+   </div>
+   <div class="entity" id="SNOMEDCode">
+      <h3>SNOMED code<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#SNOMEDCode</p>
    </div>
    <div class="entity" id="text">
       <h3>Texto<sup class="type-dp" title="Propiedad de datos">dp</sup>
@@ -940,9 +832,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#text</p>
-      <div class="comment">
-         <span class="markdown">Text</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
@@ -959,9 +848,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#title</p>
-      <div class="comment">
-         <span class="markdown">Title</span>
-      </div>
       <div class="description">
          <dl>
             <dt>rango</dt>
