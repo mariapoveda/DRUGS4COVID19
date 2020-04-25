@@ -28,7 +28,7 @@
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
-        <rdfs:seeAlso rdf:resource="https://w3id.org/def/web%20proyecto"/>
+        <rdfs:seeAlso rdf:resource="http://drugs4covid.oeg-upm.net"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
     </owl:Ontology>
     
