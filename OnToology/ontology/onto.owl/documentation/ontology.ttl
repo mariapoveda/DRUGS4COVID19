@@ -25,7 +25,7 @@
                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> ;
-                                      rdfs:seeAlso <https://w3id.org/def/web%20proyecto> ;
+                                      rdfs:seeAlso <http://drugs4covid.oeg-upm.net> ;
                                       owl:versionInfo 0.3 .
 
 #################################################################

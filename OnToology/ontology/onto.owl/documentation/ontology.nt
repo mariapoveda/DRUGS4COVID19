@@ -17,7 +17,7 @@
 <https://w3id.org/def/DRUGS4COVID19> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <https://w3id.org/def/DRUGS4COVID19> <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" .
 <https://w3id.org/def/DRUGS4COVID19> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> .
-<https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/def/web%20proyecto> .
+<https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://drugs4covid.oeg-upm.net> .
 <https://w3id.org/def/DRUGS4COVID19> <http://www.w3.org/2002/07/owl#versionInfo> "0.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
