@@ -21,7 +21,7 @@
       "@type" : "@id"
     },
     "license" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#license",
+      "@id" : "http://purl.org/dc/elements/1.1/license",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "drugName" : {
@@ -84,12 +84,19 @@
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
+    "MESHLevel" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#MESHLevel"
+    },
     "ATC1Code" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC1Code",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Symptom" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#Symptom"
+    },
+    "prevents" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#prevents",
+      "@type" : "@id"
     },
     "causedByDrug" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#causedByDrug",
@@ -124,8 +131,7 @@
       "@id" : "https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance"
     },
     "title" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#title",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+      "@id" : "http://purl.org/dc/terms/title"
     },
     "hasEffect" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#hasEffect",
@@ -166,6 +172,9 @@
     },
     "Disorder" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#Disorder"
+    },
+    "Paragraph" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#Paragraph"
     },
     "problem" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#problem",

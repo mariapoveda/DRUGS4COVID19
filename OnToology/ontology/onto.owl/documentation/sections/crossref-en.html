@@ -1,7 +1,7 @@
-<h2  id="crossreference" class="list">Cross reference for Drugs for COVID-19 classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross reference for Drugs for COVID-19 classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Drugs for COVID-19.
 <div id="classes">
-   <h3 id="classes" class="list">Classes</h3>
+   <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
          <a href="#ActiveSubstance"
@@ -28,6 +28,9 @@ This section provides details for each class and property defined by Drugs for C
       </li>
       <li>
          <a href="#Paper" title="https://w3id.org/def/DRUGS4COVID19#Paper">Paper</a>
+      </li>
+      <li>
+         <a href="#Paragraph" title="https://w3id.org/def/DRUGS4COVID19#Paragraph">Paragraph</a>
       </li>
       <li>
          <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Sentence</a>
@@ -96,13 +99,6 @@ This section provides details for each class and property defined by Drugs for C
             <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dd>
-            <a href="#hasSymptom" title="https://w3id.org/def/DRUGS4COVID19#hasSymptom">Has symptom</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Symptom" title="https://w3id.org/def/DRUGS4COVID19#Symptom">Symptom</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="Disorder">
@@ -130,38 +126,7 @@ This section provides details for each class and property defined by Drugs for C
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Drug</p>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#hasActiveSubstance"
-               title="https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance">Has active substance</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#ActiveSubstance"
-               title="https://w3id.org/def/DRUGS4COVID19#ActiveSubstance">Active substance</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">Has effect</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Effect" title="https://w3id.org/def/DRUGS4COVID19#Effect">Effect</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#isContraindicatedTo"
-               title="https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo">Is contraindicated to</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#treatsDisorder"
-               title="https://w3id.org/def/DRUGS4COVID19#treatsDisorder">Treats disorder</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Disorder" title="https://w3id.org/def/DRUGS4COVID19#Disorder">Disorder</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="Effect">
@@ -173,13 +138,7 @@ This section provides details for each class and property defined by Drugs for C
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Effect</p>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#causedByDrug" title="https://w3id.org/def/DRUGS4COVID19#causedByDrug">Caused by drug</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Drug" title="https://w3id.org/def/DRUGS4COVID19#Drug">Drug</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="Paper">
@@ -195,14 +154,15 @@ This section provides details for each class and property defined by Drugs for C
             <a href="#http://purl.org/dc/terms/BibliographicResource" title="http://purl.org/dc/terms/BibliographicResource">Bibliographic resource</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dd>
-            <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">Contains</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#Sentence" title="https://w3id.org/def/DRUGS4COVID19#Sentence">Sentence</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
+   </div>
+   <div class="entity" id="Paragraph">
+      <h3>Paragraph<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#Paragraph</p>
    </div>
    <div class="entity" id="Sentence">
       <h3>Sentence<sup class="type-c" title="class">c</sup>
@@ -268,6 +228,9 @@ This section provides details for each class and property defined by Drugs for C
       </li>
       <li>
          <a href="#mentions" title="https://w3id.org/def/DRUGS4COVID19#mentions">Mentions</a>
+      </li>
+      <li>
+         <a href="#prevents" title="https://w3id.org/def/DRUGS4COVID19#prevents">Prevents</a>
       </li>
       <li>
          <a href="#trataEnfermedad"
@@ -474,6 +437,14 @@ This section provides details for each class and property defined by Drugs for C
          </dl>
       </div>
    </div>
+   <div class="entity" id="prevents">
+      <h3>Prevents<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#prevents</p>
+   </div>
    <div class="entity" id="trataEnfermedad">
       <h3>trata enfermedad<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -515,8 +486,11 @@ This section provides details for each class and property defined by Drugs for C
       </div>
    </div>
 </div><div id="dataproperties">
-   <h3 id="dataproperties" class="list">Data Properties</h3>
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Abstract</a>
+      </li>
       <li>
          <a href="#activeSubstanceName"
             title="https://w3id.org/def/DRUGS4COVID19#activeSubstanceName">Active substance name</a>
@@ -546,22 +520,19 @@ This section provides details for each class and property defined by Drugs for C
          <a href="#drugName" title="https://w3id.org/def/DRUGS4COVID19#drugName">Drug name</a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">Fuente</a>
-      </li>
-      <li>
          <a href="#identifier" title="https://w3id.org/def/DRUGS4COVID19#identifier">Identifier</a>
       </li>
       <li>
-         <a href="#license" title="https://w3id.org/def/DRUGS4COVID19#license">License</a>
+         <a href="#http://purl.org/dc/elements/1.1/license" title="http://purl.org/dc/elements/1.1/license">License</a>
       </li>
       <li>
          <a href="#MESHCode" title="https://w3id.org/def/DRUGS4COVID19#MESHCode">MESH code</a>
       </li>
       <li>
-         <a href="#problem" title="https://w3id.org/def/DRUGS4COVID19#problem">Problem</a>
+         <a href="#MESHLevel" title="https://w3id.org/def/DRUGS4COVID19#MESHLevel">MESH level</a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Resumen</a>
+         <a href="#problem" title="https://w3id.org/def/DRUGS4COVID19#problem">Problem</a>
       </li>
       <li>
          <a href="#scientificName"
@@ -571,12 +542,23 @@ This section provides details for each class and property defined by Drugs for C
          <a href="#SNOMEDCode" title="https://w3id.org/def/DRUGS4COVID19#SNOMEDCode">SNOMED code</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">Source</a>
+      </li>
+      <li>
          <a href="#text" title="https://w3id.org/def/DRUGS4COVID19#text">Text</a>
       </li>
       <li>
-         <a href="#title" title="https://w3id.org/def/DRUGS4COVID19#title">Title</a>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Title</a>
       </li>
    </ul>
+   <div class="entity" id="http://purl.org/dc/terms/abstract">
+      <h3>Abstract<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+   </div>
    <div class="entity" id="activeSubstanceName">
       <h3>Active substance name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -713,22 +695,6 @@ This section provides details for each class and property defined by Drugs for C
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://purl.org/dc/terms/source">
-      <h3>Fuente<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/source</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="identifier">
       <h3>Identifier<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -745,13 +711,13 @@ This section provides details for each class and property defined by Drugs for C
          </dl>
       </div>
    </div>
-   <div class="entity" id="license">
+   <div class="entity" id="http://purl.org/dc/elements/1.1/license">
       <h3>License<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#license</p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/license</p>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -777,6 +743,14 @@ This section provides details for each class and property defined by Drugs for C
          </dl>
       </div>
    </div>
+   <div class="entity" id="MESHLevel">
+      <h3>MESH level<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#MESHLevel</p>
+   </div>
    <div class="entity" id="problem">
       <h3>Problem<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -792,14 +766,6 @@ This section provides details for each class and property defined by Drugs for C
             </dd>
          </dl>
       </div>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/abstract">
-      <h3>Resumen<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
    </div>
    <div class="entity" id="scientificName">
       <h3>Scientific name<sup class="type-dp" title="data property">dp</sup>
@@ -825,6 +791,22 @@ This section provides details for each class and property defined by Drugs for C
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#SNOMEDCode</p>
    </div>
+   <div class="entity" id="http://purl.org/dc/terms/source">
+      <h3>Source<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="text">
       <h3>Text<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -841,21 +823,13 @@ This section provides details for each class and property defined by Drugs for C
          </dl>
       </div>
    </div>
-   <div class="entity" id="title">
+   <div class="entity" id="http://purl.org/dc/terms/title">
       <h3>Title<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#title</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
