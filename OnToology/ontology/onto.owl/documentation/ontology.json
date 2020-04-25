@@ -89,11 +89,27 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Licencia"
+  }, {
+    "@language" : "en",
+    "@value" : "License"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/BibliographicResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -108,10 +124,11 @@
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Abstract"
+  }, {
     "@language" : "es",
     "@value" : "Resumen"
-  }, {
-    "@value" : "Abstract"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/contributor",
@@ -129,6 +146,7 @@
     "@language" : "en",
     "@value" : "Date"
   }, {
+    "@language" : "es",
     "@value" : "Fecha"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -147,10 +165,21 @@
     "@language" : "es",
     "@value" : "Fuente"
   }, {
+    "@language" : "en",
     "@value" : "Source"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Title"
+  }, {
+    "@language" : "es",
+    "@value" : "Título"
   } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
@@ -203,10 +232,10 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "es",
-    "@value" : "Esta ontología describe los medicamentos y sus relaciones relacionados con el COVID-19. Se desarrolla en el contexto del hackathon #VenceAlVirus organizado por la Comunidad de Madrid y la Consejería de Ciencia, Universidades e Innovación, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."
+    "@value" : "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus del Allen Institute of Artificial Intelligence, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."
   }, {
     "@language" : "en",
-    "@value" : "This ontology aims to model the drugs and their relations related to the COVID-19 in the context of the Hackathon #VenceAlVirus organised by the Comunidad de Madrid and the Consejería de Ciencia, Universidades e Innovación with the goal of finding answers to the challenges that COVID-19 is posing to the world."
+    "@value" : "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers (using currently the CORD-19 dataset from the Allen Institute of Artificial Intelligence), with the goal of finding answers to the challenges that COVID-19 is posing to the world."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
@@ -218,11 +247,11 @@
     "@id" : "https://w3id.org/def/DRUGS4COVID19"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "https://taiga.vencealvirus.software.imdea.org/project/ocorcho-salud-un-catalogo-de-medicamentos-usados-para-combatir-el-covid-19-segun-la-literatura-cientifica-y-aplicando-tecnicas-de-inteligencia-artificial-y-ciencia-ciudadana/"
+    "@id" : "https://w3id.org/def/web%20proyecto"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.1"
+    "@value" : "0.3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC1Code",
@@ -331,10 +360,11 @@
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Disorder",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Desorden"
+  }, {
     "@language" : "en",
     "@value" : "Disorder"
-  }, {
-    "@value" : "Desorden"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Drug",
@@ -382,6 +412,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#MESHLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MESH level"
+  }, {
+    "@language" : "es",
+    "@value" : "nivel MESH"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Paper",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -398,6 +438,16 @@
     "@id" : "http://purl.org/dc/terms/BibliographicResource"
   }, {
     "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#Paragraph",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Paragraph"
+  }, {
+    "@language" : "es",
+    "@value" : "Párrafo"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#SNOMEDCode",
@@ -474,6 +524,7 @@
     "@language" : "en",
     "@value" : "Disorder name"
   }, {
+    "@language" : "es",
     "@value" : "Nombre del desorden"
   } ]
 }, {
@@ -596,19 +647,6 @@
     "@id" : "https://w3id.org/def/DRUGS4COVID19#treatsDisorder"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/DRUGS4COVID19#license",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Licencia"
-  }, {
-    "@language" : "en",
-    "@value" : "License"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#mentions",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -623,6 +661,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#prevents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Prevents"
+  }, {
+    "@language" : "es",
+    "@value" : "Previene"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#problem",
@@ -659,19 +707,6 @@
   }, {
     "@language" : "es",
     "@value" : "Texto"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/DRUGS4COVID19#title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Title"
-  }, {
-    "@language" : "es",
-    "@value" : "Título"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
