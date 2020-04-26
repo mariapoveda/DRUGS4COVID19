@@ -20,13 +20,13 @@
                                                                              "Socorro Bernardos Galindo"@es ;
                                       <http://purl.org/dc/terms/created> "2020-04-04"@es ;
                                       <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> ;
-                                      <http://purl.org/dc/terms/description> "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus del Allen Institute of Artificial Intelligence, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."@es ,
-                                                                             "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers (using currently the CORD-19 dataset from the Allen Institute of Artificial Intelligence), with the goal of finding answers to the challenges that COVID-19 is posing to the world."@en ;
+                                      <http://purl.org/dc/terms/description> "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."@es ,
+                                                                             "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers, with the goal of finding answers to the challenges that COVID-19 is posing to the world."@en ;
                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> ;
                                       rdfs:seeAlso <http://drugs4covid.oeg-upm.net> ;
-                                      owl:versionInfo 0.3 .
+                                      owl:versionInfo 0.4 .
 
 #################################################################
 #    Annotation properties
@@ -123,10 +123,23 @@
                                     "Is active substance of drug"@en .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#isBroaderThan
+:isBroaderThan rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isNarrowerThan ;
+               rdfs:label "Is broader than"@en ,
+                          "es más amplio"@es .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo
 :isContraindicatedTo rdf:type owl:ObjectProperty ;
                      rdfs:label "Está contraindicado para"@es ,
                                 "Is contraindicated to"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#isNarrowerThan
+:isNarrowerThan rdf:type owl:ObjectProperty ;
+                rdfs:label "Es más específico"@es ,
+                           "Is narrower than"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease
@@ -140,6 +153,12 @@
                    owl:inverseOf :treatsDisorder ;
                    rdfs:label "Es tratado con medicamento"@es ,
                               "Is treated with drug"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#mapsTo
+:mapsTo rdf:type owl:ObjectProperty ;
+        rdfs:label "Maps to"@en ,
+                   "Relacionada con"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#mentions
@@ -189,6 +208,10 @@
                                                      "License"@en .
 
 
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty .
+
+
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:DatatypeProperty ;
                                     rdfs:label "Abstract"@en ,
@@ -207,12 +230,6 @@
                                   rdfs:range xsd:string ;
                                   rdfs:label "Fuente"@es ,
                                              "Source"@en .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
-                                 rdfs:label "Title"@en ,
-                                            "Título"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#ATC1Code
@@ -259,6 +276,7 @@
 
 ###  https://w3id.org/def/DRUGS4COVID19#MESHLevel
 :MESHLevel rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:integer ;
            rdfs:label "MESH level"@en ,
                       "nivel MESH"@es .
 
@@ -308,6 +326,19 @@
                 rdfs:range xsd:string ;
                 rdfs:label "Nombre científico"@es ,
                            "Scientific name"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#section
+:section rdf:type owl:DatatypeProperty ;
+         rdfs:label "Sección"@es ,
+                    "Section"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#synonym
+:synonym rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Sinónimo"@es ,
+                      "Synonym"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#text
@@ -418,6 +449,14 @@
          rdfs:subClassOf :Disorder ;
          rdfs:label "Symptom"@en ,
                     "Síntoma"@es .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/elements/1.1/title> rdfs:label "Title"@en ,
+                                                   "Título"@es .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

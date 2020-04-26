@@ -10,11 +10,19 @@
       "@id" : "https://w3id.org/def/DRUGS4COVID19#esTratadaConMedicamento",
       "@type" : "@id"
     },
+    "synonym" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#synonym",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
     "created" : {
       "@id" : "http://purl.org/dc/terms/created"
+    },
+    "isBroaderThan" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#isBroaderThan",
+      "@type" : "@id"
     },
     "treatsDisorder" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#treatsDisorder",
@@ -85,7 +93,11 @@
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "MESHLevel" : {
-      "@id" : "https://w3id.org/def/DRUGS4COVID19#MESHLevel"
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#MESHLevel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "section" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#section"
     },
     "ATC1Code" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC1Code",
@@ -130,8 +142,13 @@
     "ChemicalSubstance" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance"
     },
+    "mapsTo" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#mapsTo",
+      "@type" : "@id"
+    },
     "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
+      "@id" : "http://purl.org/dc/elements/1.1/title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasEffect" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#hasEffect",
@@ -154,6 +171,10 @@
     },
     "BibliographicResource" : {
       "@id" : "http://purl.org/dc/terms/BibliographicResource"
+    },
+    "isNarrowerThan" : {
+      "@id" : "https://w3id.org/def/DRUGS4COVID19#isNarrowerThan",
+      "@type" : "@id"
     },
     "ATC4Code" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC4Code",
@@ -179,6 +200,9 @@
     "problem" : {
       "@id" : "https://w3id.org/def/DRUGS4COVID19#problem",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor"
