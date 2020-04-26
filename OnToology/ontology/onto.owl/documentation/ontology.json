@@ -106,7 +106,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Title"
+  }, {
+    "@language" : "es",
+    "@value" : "Título"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
@@ -172,16 +179,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Title"
-  }, {
-    "@language" : "es",
-    "@value" : "Título"
-  } ]
-}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -232,10 +229,10 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "es",
-    "@value" : "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus del Allen Institute of Artificial Intelligence, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."
+    "@value" : "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."
   }, {
     "@language" : "en",
-    "@value" : "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers (using currently the CORD-19 dataset from the Allen Institute of Artificial Intelligence), with the goal of finding answers to the challenges that COVID-19 is posing to the world."
+    "@value" : "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers, with the goal of finding answers to the challenges that COVID-19 is posing to the world."
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
@@ -251,7 +248,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.3"
+    "@value" : "0.4"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#ATC1Code",
@@ -420,6 +417,9 @@
   }, {
     "@language" : "es",
     "@value" : "nivel MESH"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#Paper",
@@ -614,6 +614,19 @@
     "@value" : "Is active substance of drug"
   } ]
 }, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#isBroaderThan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is broader than"
+  }, {
+    "@language" : "es",
+    "@value" : "es más amplio"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/def/DRUGS4COVID19#isNarrowerThan"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -622,6 +635,16 @@
   }, {
     "@language" : "en",
     "@value" : "Is contraindicated to"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#isNarrowerThan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Es más específico"
+  }, {
+    "@language" : "en",
+    "@value" : "Is narrower than"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease",
@@ -645,6 +668,16 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/def/DRUGS4COVID19#treatsDisorder"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#mapsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maps to"
+  }, {
+    "@language" : "es",
+    "@value" : "Relacionada con"
   } ]
 }, {
   "@id" : "https://w3id.org/def/DRUGS4COVID19#mentions",
@@ -694,6 +727,29 @@
   }, {
     "@language" : "en",
     "@value" : "Scientific name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#section",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Sección"
+  }, {
+    "@language" : "en",
+    "@value" : "Section"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/DRUGS4COVID19#synonym",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sinónimo"
+  }, {
+    "@language" : "en",
+    "@value" : "Synonym"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"

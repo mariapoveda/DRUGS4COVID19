@@ -197,6 +197,13 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#contains" title="https://w3id.org/def/DRUGS4COVID19#contains">Contiene</a>
       </li>
       <li>
+         <a href="#isBroaderThan" title="https://w3id.org/def/DRUGS4COVID19#isBroaderThan">es más amplio</a>
+      </li>
+      <li>
+         <a href="#isNarrowerThan"
+            title="https://w3id.org/def/DRUGS4COVID19#isNarrowerThan">Es más específico</a>
+      </li>
+      <li>
          <a href="#isActiveSubstanceOfDrug"
             title="https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug">Es principio activo de medicamento</a>
       </li>
@@ -221,6 +228,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </li>
       <li>
          <a href="#prevents" title="https://w3id.org/def/DRUGS4COVID19#prevents">Previene</a>
+      </li>
+      <li>
+         <a href="#mapsTo" title="https://w3id.org/def/DRUGS4COVID19#mapsTo">Relacionada con</a>
       </li>
       <li>
          <a href="#hasEffect" title="https://w3id.org/def/DRUGS4COVID19#hasEffect">Tiene efecto</a>
@@ -265,6 +275,41 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#contains</p>
+   </div>
+   <div class="entity" id="isBroaderThan">
+      <h3>es más amplio<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isBroaderThan</p>
+      <div class="description">
+         <dl>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#isNarrowerThan"
+                  title="https://w3id.org/def/DRUGS4COVID19#isNarrowerThan">Es más específico</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isNarrowerThan">
+      <h3>Es más específico<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#isNarrowerThan</p>
+      <div class="description">
+         <dl>
+            <dt>inversa de</dt>
+            <dd>
+               <a href="#isBroaderThan" title="https://w3id.org/def/DRUGS4COVID19#isBroaderThan">es más amplio</a>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="isActiveSubstanceOfDrug">
       <h3>Es principio activo de medicamento<sup class="type-op" title="Propiedad entre objetos">op</sup>
@@ -391,6 +436,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#prevents</p>
+   </div>
+   <div class="entity" id="mapsTo">
+      <h3>Relacionada con<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#mapsTo</p>
    </div>
    <div class="entity" id="hasEffect">
       <h3>Tiene efecto<sup class="type-op" title="Propiedad entre objetos">op</sup>
@@ -542,13 +595,18 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">Resumen</a>
       </li>
       <li>
+         <a href="#section" title="https://w3id.org/def/DRUGS4COVID19#section">Sección</a>
+      </li>
+      <li>
          <a href="#SNOMEDCode" title="https://w3id.org/def/DRUGS4COVID19#SNOMEDCode">SNOMED code</a>
       </li>
       <li>
-         <a href="#text" title="https://w3id.org/def/DRUGS4COVID19#text">Texto</a>
+         <a href="#synonym" title="https://w3id.org/def/DRUGS4COVID19#synonym">
+            <span>synonym</span>
+         </a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">Título</a>
+         <a href="#text" title="https://w3id.org/def/DRUGS4COVID19#text">Texto</a>
       </li>
    </ul>
    <div class="entity" id="ATC1Code">
@@ -718,6 +776,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#MESHLevel</p>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="scientificName">
       <h3>Nombre científico<sup class="type-dp" title="Propiedad de datos">dp</sup>
@@ -799,6 +865,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
    </div>
+   <div class="entity" id="section">
+      <h3>Sección<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#section</p>
+   </div>
    <div class="entity" id="SNOMEDCode">
       <h3>SNOMED code<sup class="type-dp" title="Propiedad de datos">dp</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
@@ -806,6 +880,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#SNOMEDCode</p>
+   </div>
+   <div class="entity" id="synonym">
+      <h3>synonym<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/DRUGS4COVID19#synonym</p>
+      <div class="comment">
+         <span class="markdown">Sinónimo</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="text">
       <h3>Texto<sup class="type-dp" title="Propiedad de datos">dp</sup>
@@ -822,14 +915,6 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
             </dd>
          </dl>
       </div>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/title">
-      <h3>Título<sup class="type-dp" title="Propiedad de datos">dp</sup>
-         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
    </div>
 </div><div id="legend">
 <h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
