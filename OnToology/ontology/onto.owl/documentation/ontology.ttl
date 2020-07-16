@@ -8,7 +8,7 @@
 
 <https://w3id.org/def/DRUGS4COVID19> rdf:type owl:Ontology ;
                                       <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> ;
-                                      <http://purl.org/dc/elements/1.1/title> "Drugs for COVID-19" ;
+                                      <http://purl.org/dc/elements/1.1/title> "Drugs for COVID-19"^^xsd:string ;
                                       <http://purl.org/dc/terms/contributor> <http://purl.org/net/mpoveda> ,
                                                                              "Alba Fernández Izquierdo"@es ,
                                                                              "Ana Iglesias"@es ,
@@ -20,10 +20,15 @@
                                                                              "Socorro Bernardos Galindo"@es ;
                                       <http://purl.org/dc/terms/created> "2020-04-04"@es ;
                                       <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> ;
-                                      <http://purl.org/dc/terms/description> "Esta ontología describe los artículos y medicamentos  relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19."@es ,
-                                                                             "This ontology aims to model the  knoeledge from the huge corpus of coronavirus-related papers, with the goal of finding answers to the challenges that COVID-19 is posing to the world."@en ;
+                                      <http://purl.org/dc/terms/description> """
+Esta ontología describe los artículos y medicamentos relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19.
+"""@es ,
+                                                                             """
+This ontology aims to model the knoeledge from the huge corpus of coronavirus-related papers, with the goal of finding answers to the challenges that COVID-19 is posing to the world.
+"""@en ;
                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid" ;
+                                      <http://purl.org/dc/terms/modified> "2020-07-16"@es ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "d4covid"^^xsd:string ;
                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/def/DRUGS4COVID19> ;
                                       rdfs:seeAlso <http://drugs4covid.oeg-upm.net> ;
                                       owl:versionInfo 0.4 .
@@ -62,7 +67,8 @@
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:range xsd:string .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -80,12 +86,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#causedByDrug
 :causedByDrug rdf:type owl:ObjectProperty ;
               owl:inverseOf :hasEffect ;
+              rdfs:comment "A relation between an effect and a drug that causes it"@en ;
               rdfs:label "Causado por medicamento"@es ,
                          "Caused by drug"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#contains
 :contains rdf:type owl:ObjectProperty ;
+          rdfs:comment "A relatiion between a whole and one of its parts"@en ;
           rdfs:label "Contains"@en ,
                      "Contiene"@es .
 
@@ -100,12 +108,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#hasActiveSubstance
 :hasActiveSubstance rdf:type owl:ObjectProperty ;
                     owl:inverseOf :isActiveSubstanceOfDrug ;
+                    rdfs:comment "A relation between a drug and its active substance"@en ;
                     rdfs:label "Has active substance"@en ,
                                "Tiene principio activo"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#hasEffect
 :hasEffect rdf:type owl:ObjectProperty ;
+           rdfs:comment "A relation between a drug and an effect it causes"@en ;
            rdfs:label "Has effect"@en ,
                       "Tiene efecto"@es .
 
@@ -113,12 +123,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#hasSymptom
 :hasSymptom rdf:type owl:ObjectProperty ;
             owl:inverseOf :isSymptomOfDisease ;
+            rdfs:comment "A relation between a disease and one of its symptoms"@en ;
             rdfs:label "Has symptom"@en ,
                        "Tiene síntoma"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isActiveSubstanceOfDrug
 :isActiveSubstanceOfDrug rdf:type owl:ObjectProperty ;
+                         rdfs:comment "A relation between an active substance and a drug it is an ingredient of"@en ;
                          rdfs:label "Es principio activo de medicamento"@es ,
                                     "Is active substance of drug"@en .
 
@@ -126,24 +138,28 @@
 ###  https://w3id.org/def/DRUGS4COVID19#isBroaderThan
 :isBroaderThan rdf:type owl:ObjectProperty ;
                owl:inverseOf :isNarrowerThan ;
+               rdfs:comment "A relation between two things in which one is in some way more general  than the other"@en ;
                rdfs:label "Is broader than"@en ,
                           "es más amplio"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isContraindicatedTo
 :isContraindicatedTo rdf:type owl:ObjectProperty ;
+                     rdfs:comment "A relation between a drug and one of the diseases it is advised against"@en ;
                      rdfs:label "Está contraindicado para"@es ,
                                 "Is contraindicated to"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isNarrowerThan
 :isNarrowerThan rdf:type owl:ObjectProperty ;
+                rdfs:comment "A relation between two things in which one is in some way more specific than the other"@en ;
                 rdfs:label "Es más específico"@es ,
                            "Is narrower than"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#isSymptomOfDisease
 :isSymptomOfDisease rdf:type owl:ObjectProperty ;
+                    rdfs:comment "A relation between a symptom and one of the disorders that includes it"@en ;
                     rdfs:label "Es síntoma de enfermedad"@es ,
                                "Is symptom of disease"@en .
 
@@ -151,12 +167,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#isTreatedWithDrug
 :isTreatedWithDrug rdf:type owl:ObjectProperty ;
                    owl:inverseOf :treatsDisorder ;
+                   rdfs:comment "A relation between a disease and one of the drugs that can be used to deal with it"@en ;
                    rdfs:label "Es tratado con medicamento"@es ,
                               "Is treated with drug"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#mapsTo
 :mapsTo rdf:type owl:ObjectProperty ;
+        rdfs:comment "A relation between a disease and one of the diseases it is in some way related to"@en ;
         rdfs:label "Maps to"@en ,
                    "Relacionada con"@es .
 
@@ -175,12 +193,14 @@
                                      :Symptom
                                    )
                      ] ;
+          rdfs:comment "A relation between a text (a paper, a paragraph or a sentece) and one of the entities it speaks of"@en ;
           rdfs:label "Menciona"@es ,
                      "Mentions"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#prevents
 :prevents rdf:type owl:ObjectProperty ;
+          rdfs:comment "A relation between a drug and one of the diseases it keeps from occurring"@en ;
           rdfs:label "Prevents"@en ,
                      "Previene"@es .
 
@@ -193,6 +213,7 @@
 
 ###  https://w3id.org/def/DRUGS4COVID19#treatsDisorder
 :treatsDisorder rdf:type owl:ObjectProperty ;
+                rdfs:comment "A relation between a drug and one of the diseases it deals with"@en ;
                 rdfs:label "Trata desorden"@es ,
                            "Treats disorder"@en .
 
@@ -201,19 +222,14 @@
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/license
-<http://purl.org/dc/elements/1.1/license> rdf:type owl:DatatypeProperty ;
-                                          rdfs:range xsd:string ;
-                                          rdfs:label "Licencia"@es ,
-                                                     "License"@en .
-
-
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:DatatypeProperty ;
+                                    rdfs:comment "A summary of the resource"@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                     rdfs:label "Abstract"@en ,
                                                "Resumen"@es .
 
@@ -221,81 +237,63 @@
 ###  http://purl.org/dc/terms/date
 <http://purl.org/dc/terms/date> rdf:type owl:DatatypeProperty ;
                                 rdfs:range rdfs:Literal ;
+                                rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource"@en ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                 rdfs:label "Date"@en ,
                                            "Fecha"@es .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/source
 <http://purl.org/dc/terms/source> rdf:type owl:DatatypeProperty ;
                                   rdfs:range xsd:string ;
+                                  rdfs:comment "A related resource from which the described resource is derived"@en ;
                                   rdfs:label "Fuente"@es ,
                                              "Source"@en .
 
 
-###  https://w3id.org/def/DRUGS4COVID19#ATC1Code
-:ATC1Code rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "ATC1 code"@en ,
-                     "Código ATC1"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#ATC2Code
-:ATC2Code rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "ATC2 code"@en ,
-                     "Código ATC2"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#ATC3Code
-:ATC3Code rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "ATC3 code"@en ,
-                     "Código ATC3"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#ATC4Code
-:ATC4Code rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "ATC4 code"@en ,
-                     "Código ATC4"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#ATC5Code
-:ATC5Code rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "ATC5 code"@en ,
-                     "Código ATC5"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#MESHCode
-:MESHCode rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:label "Código MESH"@es ,
-                     "MESH code"@en .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#MESHLevel
-:MESHLevel rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:integer ;
-           rdfs:label "MESH level"@en ,
-                      "nivel MESH"@es .
-
-
-###  https://w3id.org/def/DRUGS4COVID19#SNOMEDCode
-:SNOMEDCode rdf:type owl:DatatypeProperty ;
-            rdfs:label "SNOMED code"@en ,
-                       "Código SNOMED" .
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#activeSubstanceName
 :activeSubstanceName rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:string ;
+                     rdfs:comment "How an active substance is called"@en ;
                      rdfs:label "Active substance name"@en ,
                                 "Nombre del princpio activo"@es .
 
 
+###  https://w3id.org/def/DRUGS4COVID19#codeATC
+:codeATC rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "ATC (Anatomical Therapeutic Chemical)  code"@en ;
+         rdfs:label "ATC code"@en ,
+                    "Código ATC"@es .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#codeMESH
+:codeMESH rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "MESH (Medical Subject Headings) code"@en ;
+          rdfs:label "Código MESH"@es ,
+                     "MESH code"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#codeSNOMED
+:codeSNOMED rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:comment "SNOMED (Systematized Nomenclature of Medicine) code"@en ;
+            rdfs:label "SNOMED code"@en ,
+                       "Código SNOMED"^^xsd:string .
+
+
 ###  https://w3id.org/def/DRUGS4COVID19#disorderName
 :disorderName rdf:type owl:DatatypeProperty ;
+              rdfs:comment "How a disorder is called"@en ;
               rdfs:label "Disorder name"@en ,
                          "Nombre del desorden"@es .
 
@@ -303,6 +301,7 @@
 ###  https://w3id.org/def/DRUGS4COVID19#drugName
 :drugName rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
+          rdfs:comment "How a drug is called"@en ;
           rdfs:label "Drug name"@en ,
                      "Nombre del medicamento"@es .
 
@@ -310,13 +309,31 @@
 ###  https://w3id.org/def/DRUGS4COVID19#identifier
 :identifier rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
+            rdfs:comment "How a paper is identified"@en ;
             rdfs:label "Identificador"@es ,
                        "Identifier"@en .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#levelATC
+:levelATC rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "ATC (Anatomical Therapeutic Chemical) level"@en ;
+          rdfs:label "ATC level"@en ,
+                     "Nivel ATC"@es .
+
+
+###  https://w3id.org/def/DRUGS4COVID19#levelMESH
+:levelMESH rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "MESH (Medical Subject Headings) level"@en ;
+           rdfs:label "MESH level"@en ,
+                      "nivel MESH"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#problem
 :problem rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:string ;
+         rdfs:comment "An issue with a paper"@en ;
          rdfs:label "Problem"@en ,
                     "Problema"@es .
 
@@ -324,12 +341,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#scientificName
 :scientificName rdf:type owl:DatatypeProperty ;
                 rdfs:range xsd:string ;
+                rdfs:comment "The scientific name of a drug"@en ;
                 rdfs:label "Nombre científico"@es ,
                            "Scientific name"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#section
 :section rdf:type owl:DatatypeProperty ;
+         rdfs:comment "The part of a paper in which a paragraph is included"@en ;
          rdfs:label "Sección"@es ,
                     "Section"@en .
 
@@ -337,13 +356,15 @@
 ###  https://w3id.org/def/DRUGS4COVID19#synonym
 :synonym rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:string ;
-         rdfs:comment "Sinónimo"@es ,
-                      "Synonym"@en .
+         rdfs:comment "List of synonyms of a disease"@en ;
+         rdfs:label "Sinónimo"@es ,
+                    "Synonym"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#text
 :text rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:string ;
+      rdfs:comment "The actual words of a paragraph or sentence"@en ;
       rdfs:label "Text"@en ,
                  "Texto"@es .
 
@@ -354,6 +375,8 @@
 
 ###  http://purl.org/dc/terms/BibliographicResource
 <http://purl.org/dc/terms/BibliographicResource> rdf:type owl:Class ;
+                                                 rdfs:comment "A book, article, or other documentary resource"@en ;
+                                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                                  rdfs:label "Bibliographic resource"@en ,
                                                             "Recurso bibliográfico"@es .
 
@@ -361,12 +384,14 @@
 ###  https://w3id.org/def/DRUGS4COVID19#ActiveSubstance
 :ActiveSubstance rdf:type owl:Class ;
                  rdfs:subClassOf :ChemicalSubstance ;
+                 rdfs:comment "A chemical substance that is the main ingredient of drugs"@en ;
                  rdfs:label "Active substance"@en ,
                             "Principio activo"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#ChemicalSubstance
 :ChemicalSubstance rdf:type owl:Class ;
+                   rdfs:comment "A substance produced by or used in a chemical process"@en ;
                    rdfs:label "Chemical substance"@en ,
                               "Compuesto quimico"@es .
 
@@ -378,12 +403,14 @@
                            owl:onProperty :hasSymptom ;
                            owl:someValuesFrom :Symptom
                          ] ;
+         rdfs:comment "Illness; sickness"@en ;
          rdfs:label "Disease"@en ,
                     "Enfermedad"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#Disorder
 :Disorder rdf:type owl:Class ;
+          rdfs:comment "A disruption to regular bodily structure and function."@en ;
           rdfs:label "Desorden"@es ,
                      "Disorder"@en .
 
@@ -406,6 +433,7 @@
                         owl:onProperty :treatsDisorder ;
                         owl:someValuesFrom :Disorder
                       ] ;
+      rdfs:comment "A substance used in treating disorder"@en ;
       rdfs:label "Drug"@en ,
                  "Medicamento"@es .
 
@@ -416,6 +444,7 @@
                           owl:onProperty :causedByDrug ;
                           owl:someValuesFrom :Drug
                         ] ;
+        rdfs:comment "Something produced; a result or consequence"@en ;
         rdfs:label "Efecto"@es ,
                    "Effect"@en .
 
@@ -427,6 +456,7 @@
                          owl:onProperty :contains ;
                          owl:someValuesFrom :Sentence
                        ] ;
+       rdfs:comment "A document of the corpus, subject of bio-annotations"@en ;
        rdfs:label "Comunicación"@es ,
                   "Paper"@en ,
                   "Paper"@es .
@@ -434,19 +464,21 @@
 
 ###  https://w3id.org/def/DRUGS4COVID19#Paragraph
 :Paragraph rdf:type owl:Class ;
+           rdfs:comment "One of a series of subsections each usually devoted to one idea and each usually marked by the beginning of a new line, indentation, increased interlinear space, etc."@en ;
            rdfs:label "Paragraph"@en ,
                       "Párrafo"@es .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#Sentence
 :Sentence rdf:type owl:Class ;
+          rdfs:comment "A sequence of words capable of standing alone to make an assertion, ask a question, or give a command, usually consisting of a subject and a predicate containing a finite verb"@en ;
           rdfs:label "Frase"@es ,
                      "Sentence"@en .
 
 
 ###  https://w3id.org/def/DRUGS4COVID19#Symptom
 :Symptom rdf:type owl:Class ;
-         rdfs:subClassOf :Disorder ;
+         rdfs:comment "A physical condition that arises from and accompanies a particular disease and serves as an indication of it"@en ;
          rdfs:label "Symptom"@en ,
                     "Síntoma"@es .
 
@@ -455,8 +487,22 @@
 #    Annotations
 #################################################################
 
-<http://purl.org/dc/elements/1.1/title> rdfs:label "Title"@en ,
+<http://purl.org/dc/elements/1.1/title> rdfs:comment "A name given to the resource"@en ,
+                                                     "A related resource from which the described resource is derived"@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/> ;
+                                        rdfs:label "Title"@en ,
                                                    "Título"@es .
 
 
-###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+<http://purl.org/dc/terms/license> rdfs:comment "A legal document giving official permission to do something with the resource"@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Licencia"@es ,
+                                              "License"@en .
+
+
+rdfs:seeAlso rdfs:comment "A resource that might provide additional information about the subject resource"@en ;
+             rdfs:isDefinedBy rdfs: ;
+             rdfs:label "See also"@en .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
