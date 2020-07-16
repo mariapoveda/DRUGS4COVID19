@@ -1,39 +1,40 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/def/DRUGS4COVID19#"
      xml:base="https://w3id.org/def/DRUGS4COVID19"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/def/DRUGS4COVID19">
-        <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
-        <dc:title>Drugs for COVID-19</dc:title>
-        <terms:contributor rdf:resource="http://purl.org/net/mpoveda"/>
-        <terms:contributor xml:lang="es">Alba Fernández Izquierdo</terms:contributor>
-        <terms:contributor xml:lang="es">Ana Iglesias</terms:contributor>
-        <terms:contributor xml:lang="es">Carlos Badenes</terms:contributor>
-        <terms:contributor xml:lang="es">David Chaves Fraga</terms:contributor>
-        <terms:contributor xml:lang="es">Edna Ruckhaus</terms:contributor>
-        <terms:contributor xml:lang="es">Pablo Calleja</terms:contributor>
         <terms:contributor xml:lang="es">Paola Espinoza Arias</terms:contributor>
-        <terms:contributor xml:lang="es">Socorro Bernardos Galindo</terms:contributor>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
+        <terms:contributor xml:lang="es">Carlos Badenes</terms:contributor>
+        <dc:title>Drugs for COVID-19</dc:title>
         <terms:created xml:lang="es">2020-04-04</terms:created>
+        <terms:modified xml:lang="es">2020-07-16</terms:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <terms:contributor xml:lang="es">Pablo Calleja</terms:contributor>
+        <terms:contributor xml:lang="es">Ana Iglesias</terms:contributor>
+        <terms:contributor xml:lang="es">Edna Ruckhaus</terms:contributor>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <terms:contributor rdf:resource="http://purl.org/net/mpoveda"/>
+        <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
+        <terms:contributor xml:lang="es">David Chaves Fraga</terms:contributor>
+        <rdfs:seeAlso rdf:resource="http://drugs4covid.oeg-upm.net"/>
         <terms:creator rdf:resource="http://www.oeg-upm.net/"/>
-        <terms:description xml:lang="es">
-Esta ontología describe los artículos y medicamentos relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19.
-</terms:description>
+        <terms:contributor xml:lang="es">Socorro Bernardos Galindo</terms:contributor>
         <terms:description xml:lang="en">
 This ontology aims to model the knoeledge from the huge corpus of coronavirus-related papers, with the goal of finding answers to the challenges that COVID-19 is posing to the world.
 </terms:description>
-        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <vann:preferredNamespacePrefix>d4covid</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/def/DRUGS4COVID19"/>
-        <rdfs:seeAlso rdf:resource="http://drugs4covid.oeg-upm.net"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.4</owl:versionInfo>
+        <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+        <terms:description xml:lang="es">
+Esta ontología describe los artículos y medicamentos relacionados con el COVID-19 que se encuentran en el corpus de de artículos relacionados con los corona virus, con el objetivo de encontrar las respuestas a los desafíos que está planteando el COVID-19.
+</terms:description>
+        <terms:contributor xml:lang="es">Alba Fernández Izquierdo</terms:contributor>
     </owl:Ontology>
     
 
@@ -692,7 +693,6 @@ This ontology aims to model the knoeledge from the huge corpus of coronavirus-re
     <!-- https://w3id.org/def/DRUGS4COVID19#Symptom -->
 
     <owl:Class rdf:about="https://w3id.org/def/DRUGS4COVID19#Symptom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/DRUGS4COVID19#Disorder"/>
         <rdfs:comment xml:lang="en">A physical condition that arises from and accompanies a particular disease and serves as an indication of it</rdfs:comment>
         <rdfs:label xml:lang="en">Symptom</rdfs:label>
         <rdfs:label xml:lang="es">Síntoma</rdfs:label>
@@ -730,5 +730,5 @@ This ontology aims to model the knoeledge from the huge corpus of coronavirus-re
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
 
